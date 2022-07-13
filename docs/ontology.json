@@ -1,0 +1,928 @@
+{
+  "@graph" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/description",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DLTSystem",
+    "rdfs:label" : "dc:description",
+    "subPropertyOf" : "owl:topDataProperty"
+  }, {
+    "@id" : "./",
+    "@type" : "owl:Ontology"
+  }, {
+    "@id" : ":API",
+    "@type" : "owl:Class",
+    "rdfs:label" : "API",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":APIAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "APIAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":APIVulnerability",
+    "@type" : "owl:Class",
+    "rdfs:label" : "APIVulnerability",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":AccessControlAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "AccessControlAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":Agriculture",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "Agriculture"
+  }, {
+    "@id" : ":ArtificialIntelligence",
+    "@type" : "owl:Class",
+    "rdfs:label" : "ArtificialIntelligence",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":ArtsAndRecreation",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "ArtsAndRecreation"
+  }, {
+    "@id" : ":Attack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Attack"
+  }, {
+    "@id" : ":AuditTrail",
+    "@type" : "owl:Class",
+    "rdfs:label" : "AuditTrail",
+    "subClassOf" : ":RecordKeeping"
+  }, {
+    "@id" : ":Automotive",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "Automotive"
+  }, {
+    "@id" : ":BSIGermany",
+    "@type" : [ ":NationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":BeltAndRoadInitiativeBlockchainAlliance",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":BestPractice",
+    "@type" : "owl:Class",
+    "rdfs:label" : "BestPractice",
+    "subClassOf" : ":Standard"
+  }, {
+    "@id" : ":BlockDeliveryNetwork",
+    "@type" : [ ":NetworkComponent", "owl:NamedIndividual" ],
+    "rdfs:label" : "BlockDeliveryNetwork"
+  }, {
+    "@id" : ":Blockchain",
+    "@type" : [ ":DataStructure", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":BlockchainInTransportAlliance",
+    "@type" : [ ":IndustryInitiative", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":BlockchainIndustrialAlliance",
+    "@type" : [ ":IndustryInitiative", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":BlockchainIndustryGroup",
+    "@type" : [ ":IndustryInitiative", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":BritishStandardsInstitute",
+    "@type" : [ ":NationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":BusinessProcesses",
+    "@type" : "owl:Class",
+    "rdfs:label" : "BusinessProcesses",
+    "subClassOf" : ":ContractualUse"
+  }, {
+    "@id" : ":BusinessSector",
+    "@type" : "owl:Class",
+    "rdfs:label" : "BusinessSector",
+    "subClassOf" : "owl:Thing"
+  }, {
+    "@id" : ":BusinessTransportation",
+    "@type" : "owl:Class",
+    "rdfs:label" : "BusinessTransportation",
+    "subClassOf" : ":Transportation"
+  }, {
+    "@id" : ":CEN-CENELEC",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":ChamberOfDigitalCommerce",
+    "@type" : [ ":NationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":ChinaElectronicStandardizationInstitute",
+    "@type" : [ ":NationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":ConsensusAlgorithm",
+    "@type" : "owl:Class",
+    "rdfs:label" : "ConsensusAlgorithm",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":ConsensusAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "ConsensusAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":ConsensusVulnerabiltiy",
+    "@type" : "owl:Class",
+    "rdfs:label" : "ConsensusVulnerabiltiy",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":ContractualUse",
+    "@type" : "owl:Class",
+    "rdfs:label" : "ContractualUse",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":Control",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Control"
+  }, {
+    "@id" : ":Cryptography",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Cryptography",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":CryptographyAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "CryptographyAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":Cybersecurity",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Cybersecurity",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":DAG",
+    "@type" : [ ":DataStructure", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":DAPPAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DAPPAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":DIN",
+    "@type" : [ ":NationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":DLTApplicationAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DLTApplicationAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":DLTApplicationVulnerability",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DLTApplicationVulnerability",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":DLTComponent",
+    "@type" : "owl:Class",
+    "rdfs:label" : {
+      "@language" : "en",
+      "@value" : "DLTComponent"
+    },
+    "subClassOf" : "owl:Thing"
+  }, {
+    "@id" : ":DLTSystem",
+    "@type" : "owl:Class",
+    "comment" : "Test Teststring",
+    "rdfs:label" : "DLTSystem"
+  }, {
+    "@id" : ":DataBus",
+    "@type" : [ ":DataStorage", "owl:NamedIndividual" ],
+    "rdfs:label" : "DataBus"
+  }, {
+    "@id" : ":DataProtectionLaw",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DataProtectionLaw",
+    "subClassOf" : ":Law"
+  }, {
+    "@id" : ":DataStorage",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DataStorage",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":DataStorageAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DataStorageAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":DataStorageVulnerability",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DataStorageVulnerability",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":DataStructure",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DataStructure",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":DataStructureAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DataStructureAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":DataStructureVulnerability",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DataStructureVulnerability",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":DigitalContainerShippingAssociation",
+    "@type" : [ ":IndustryInitiative", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":DigitalCurrency",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DigitalCurrency",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":DigitalIdentity",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DigitalIdentity",
+    "subClassOf" : ":PrivacyAndIdentity"
+  }, {
+    "@id" : ":DistributedApplication",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DistributedApplication",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":DistributedComputing",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DistributedComputing",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":DistributedStorage",
+    "@type" : "owl:Class",
+    "rdfs:label" : "DistributedStorage",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":Donations",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Donations",
+    "subClassOf" : ":HumanRightsAndContributions"
+  }, {
+    "@id" : ":ECommerce",
+    "@type" : "owl:Class",
+    "rdfs:label" : "ECommerce",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":ENISA",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":ETSI",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":EVoting",
+    "@type" : "owl:Class",
+    "rdfs:label" : "EVoting",
+    "subClassOf" : ":GovernmentalServices"
+  }, {
+    "@id" : ":Education",
+    "@type" : [ ":UseCase", "owl:NamedIndividual" ],
+    "rdfs:label" : "Education"
+  }, {
+    "@id" : ":Engine",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Engine",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":EngineAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "EngineAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":EngineVulnerability",
+    "@type" : "owl:Class",
+    "rdfs:label" : "EngineVulnerability",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":EnterpriseEthereumAlliance",
+    "@type" : [ ":IndustryInitiative", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":Entertainment",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Entertainment",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":FairMarketplace",
+    "@type" : "owl:Class",
+    "rdfs:label" : "FairMarketplace",
+    "subClassOf" : ":ECommerce"
+  }, {
+    "@id" : ":FinancialServices",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "FinancialServices"
+  }, {
+    "@id" : ":FinancialServicesAndTrading",
+    "@type" : "owl:Class",
+    "rdfs:label" : "FinancialServicesAndTrading",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":Gambling",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Gambling",
+    "subClassOf" : ":Entertainment"
+  }, {
+    "@id" : ":Gaming",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Gaming",
+    "subClassOf" : ":Entertainment"
+  }, {
+    "@id" : ":GlobalDigitalFinance",
+    "@type" : [ ":IndustryInitiative", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":GovernmentalServices",
+    "@type" : "owl:Class",
+    "rdfs:label" : "GovernmentalServices",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":Hashgraph",
+    "@type" : [ ":DataStructure", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":Hashtable",
+    "@type" : [ ":DataStructure", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":Healthcare",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "Healthcare"
+  }, {
+    "@id" : ":HumanRightsAndContributions",
+    "@type" : "owl:Class",
+    "rdfs:label" : "HumanRightsAndContributions",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":Hyperledger",
+    "@type" : [ ":IndustryInitiative", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":ICC-DSI",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":ICTSystemLaw",
+    "@type" : "owl:Class",
+    "rdfs:label" : "ICTSystemLaw",
+    "subClassOf" : ":Law"
+  }, {
+    "@id" : ":IEC",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":IEEE",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":ISO",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":ITU-T",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":IdentityAndAccessControlSystems",
+    "@type" : "owl:Class",
+    "rdfs:label" : "IdentityAndAccessControlSystems",
+    "subClassOf" : ":PrivacyAndIdentity"
+  }, {
+    "@id" : ":IndicationOfSource",
+    "@type" : "owl:Class",
+    "rdfs:label" : "IndicationOfSource",
+    "subClassOf" : ":SupplyChain"
+  }, {
+    "@id" : ":IndustryInitiative",
+    "@type" : "owl:Class",
+    "rdfs:label" : "IndustryInitiatives",
+    "subClassOf" : ":StandardizationOrganization"
+  }, {
+    "@id" : ":IndustryStandard",
+    "@type" : "owl:Class",
+    "rdfs:label" : "IndustryStandard",
+    "subClassOf" : ":Standard"
+  }, {
+    "@id" : ":InformativeStandard",
+    "@type" : "owl:Class",
+    "rdfs:label" : "InformativeStandard",
+    "subClassOf" : ":Standard"
+  }, {
+    "@id" : ":Inheritance",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Inheritance",
+    "subClassOf" : ":ContractualUse"
+  }, {
+    "@id" : ":InsuficientVerificationAndValidation",
+    "@type" : "owl:Class",
+    "rdfs:label" : "InsuficientVerificationAndValidation",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":Insurance",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "Insurance"
+  }, {
+    "@id" : ":IntellectualProperty",
+    "@type" : "owl:Class",
+    "rdfs:label" : "IntellectualProperty",
+    "subClassOf" : ":RecordKeeping"
+  }, {
+    "@id" : ":InternationalStandardizationOrganization",
+    "@type" : "owl:Class",
+    "rdfs:label" : {
+      "@language" : "en",
+      "@value" : "InternationalStandardizationOrganization"
+    },
+    "subClassOf" : ":StandardizationOrganization"
+  }, {
+    "@id" : ":InternetEngineeringTaskForce",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":InternetResearchTaskForce",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":InternetWorkAlliance",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":IoT",
+    "@type" : "owl:Class",
+    "rdfs:label" : "IoT",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":IoTEcosystem",
+    "@type" : "owl:Class",
+    "rdfs:label" : "IoTEcosystem",
+    "subClassOf" : ":IoT"
+  }, {
+    "@id" : ":JointWorkingGroupOnInterVASPMessagingStandards",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":LackingPermissionControl",
+    "@type" : "owl:Class",
+    "rdfs:label" : "LackingPermissionControl",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":LandRegister",
+    "@type" : "owl:Class",
+    "rdfs:label" : "LandRegister",
+    "subClassOf" : ":RecordKeeping"
+  }, {
+    "@id" : ":Law",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Law"
+  }, {
+    "@id" : ":LegalContracts",
+    "@type" : "owl:Class",
+    "rdfs:label" : "LegalContracts",
+    "subClassOf" : ":ContractualUse"
+  }, {
+    "@id" : ":Manufacturing",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "Manufacturing"
+  }, {
+    "@id" : ":MerchantConnection",
+    "@type" : "owl:Class",
+    "rdfs:label" : "MerchantConnection",
+    "subClassOf" : ":ECommerce"
+  }, {
+    "@id" : ":Microfinance",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Microfinance",
+    "subClassOf" : ":DigitalCurrency"
+  }, {
+    "@id" : ":Mining",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "Mining"
+  }, {
+    "@id" : ":Mitigation",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Mitigation"
+  }, {
+    "@id" : ":MobilityOpenBlockchainInitiative",
+    "@type" : [ ":IndustryInitiative", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":MusicIndustry",
+    "@type" : "owl:Class",
+    "rdfs:label" : "MusicIndustry",
+    "subClassOf" : ":Entertainment"
+  }, {
+    "@id" : ":NGO",
+    "@type" : "owl:Class",
+    "rdfs:label" : "NGO",
+    "subClassOf" : ":HumanRightsAndContributions"
+  }, {
+    "@id" : ":NIST",
+    "@type" : [ ":NationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":NationalBlockchainAndDistributedAccountingTechnologyStandardizationTechnicalCommittee",
+    "@type" : [ ":NationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":NationalStandardizationOrganization",
+    "@type" : "owl:Class",
+    "rdfs:label" : {
+      "@language" : "en",
+      "@value" : "NationalStandardizationOrganization"
+    },
+    "subClassOf" : ":StandardizationOrganization"
+  }, {
+    "@id" : ":NetworkAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "NetworkAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":NetworkComponent",
+    "@type" : "owl:Class",
+    "rdfs:label" : "NetworkComponent",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":NetworkVulnerability",
+    "@type" : "owl:Class",
+    "rdfs:label" : "NetworkVulnerability",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":NormativeStandard",
+    "@type" : "owl:Class",
+    "rdfs:label" : "NormativeStandard",
+    "subClassOf" : ":Standard"
+  }, {
+    "@id" : ":OffChain",
+    "@type" : [ ":DataStorage", "owl:NamedIndividual" ],
+    "rdfs:label" : "OffChain"
+  }, {
+    "@id" : ":OnChain",
+    "@type" : [ ":DataStorage", "owl:NamedIndividual" ],
+    "rdfs:label" : "OnChain"
+  }, {
+    "@id" : ":OrganizationalControl",
+    "@type" : "owl:Class",
+    "rdfs:label" : "OrganizationalControl",
+    "subClassOf" : ":Control"
+  }, {
+    "@id" : ":OrganizationalMitigation",
+    "@type" : "owl:Class",
+    "rdfs:label" : "OrganizationalMitigation",
+    "subClassOf" : ":Mitigation"
+  }, {
+    "@id" : ":Ownership",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Ownership",
+    "subClassOf" : ":RecordKeeping"
+  }, {
+    "@id" : ":P2PLending",
+    "@type" : "owl:Class",
+    "rdfs:label" : "P2PLending",
+    "subClassOf" : ":DigitalCurrency"
+  }, {
+    "@id" : ":Payments",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Payments",
+    "subClassOf" : ":DigitalCurrency"
+  }, {
+    "@id" : ":PeerToPeer",
+    "@type" : [ ":NetworkComponent", "owl:NamedIndividual" ],
+    "rdfs:label" : "PeerToPeer"
+  }, {
+    "@id" : ":PermissionControl",
+    "@type" : "owl:Class",
+    "rdfs:label" : "PermissionControl",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":PowerManagement",
+    "@type" : "owl:Class",
+    "rdfs:label" : "PowerManagement",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":PrivacyAndIdentity",
+    "@type" : "owl:Class",
+    "rdfs:label" : "PrivacyAndIdentity",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":Property",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "Property"
+  }, {
+    "@id" : ":Protocol",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Protocol",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":ProtocolAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "ProtocolAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":ProtocolVulnerability",
+    "@type" : "owl:Class",
+    "rdfs:label" : "ProtocolVulnerability",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":PublicSector",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "PublicSector"
+  }, {
+    "@id" : ":PublicTransportation",
+    "@type" : "owl:Class",
+    "rdfs:label" : "PublicTransportation",
+    "subClassOf" : ":Transportation"
+  }, {
+    "@id" : ":RPLx",
+    "@type" : [ ":NetworkComponent", "owl:NamedIndividual" ],
+    "rdfs:label" : "RPLx"
+  }, {
+    "@id" : ":RecordKeeping",
+    "@type" : "owl:Class",
+    "rdfs:label" : "RecordKeeping",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":Retail",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "Retail"
+  }, {
+    "@id" : ":RightToInformation",
+    "@type" : "owl:Class",
+    "rdfs:label" : "RightToInformation",
+    "subClassOf" : ":HumanRightsAndContributions"
+  }, {
+    "@id" : ":SecureIoT",
+    "@type" : "owl:Class",
+    "rdfs:label" : "SecureIoT",
+    "subClassOf" : ":IoT"
+  }, {
+    "@id" : ":SmartCars",
+    "@type" : "owl:Class",
+    "rdfs:label" : "SmartCars",
+    "subClassOf" : ":Transportation"
+  }, {
+    "@id" : ":SmartContract",
+    "@type" : "owl:Class",
+    "rdfs:label" : "SmartContract",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":SmartContractAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "SmartContractAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":SmartContractVulnerability",
+    "@type" : "owl:Class",
+    "rdfs:label" : "SmartContractVulnerability",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":SmartManufacturing",
+    "@type" : "owl:Class",
+    "rdfs:label" : "SmartManufacturing",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":SmartMeter",
+    "@type" : "owl:Class",
+    "rdfs:label" : "SmartMeter",
+    "subClassOf" : ":PowerManagement"
+  }, {
+    "@id" : ":Standard",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Standard"
+  }, {
+    "@id" : ":StandardizationOrganization",
+    "@type" : "owl:Class",
+    "rdfs:label" : "StandardizationOrganization"
+  }, {
+    "@id" : ":StandardsAdministrationOfChina",
+    "@type" : [ ":NationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":StandardsAustralia",
+    "@type" : [ ":NationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":Streaming",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Streaming",
+    "subClassOf" : ":Entertainment"
+  }, {
+    "@id" : ":SupplyChain",
+    "@type" : "owl:Class",
+    "rdfs:label" : "SupplyChain",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":TechnicalControl",
+    "@type" : "owl:Class",
+    "rdfs:label" : "TechnicalControl",
+    "subClassOf" : ":Control"
+  }, {
+    "@id" : ":TechnicalMitigation",
+    "@type" : "owl:Class",
+    "rdfs:label" : "TechnicalMitigation",
+    "subClassOf" : ":Mitigation"
+  }, {
+    "@id" : ":TechnologyMediaAndTelecommunications",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "TechnologyMediaAndTelecommunications"
+  }, {
+    "@id" : ":Tracking",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Tracking",
+    "subClassOf" : ":SupplyChain"
+  }, {
+    "@id" : ":Transaction",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Transaction",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":TransportAndLogistics",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "TransportAndLogistics"
+  }, {
+    "@id" : ":Transportation",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Transportation",
+    "subClassOf" : ":UseCase"
+  }, {
+    "@id" : ":Traveling",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Traveling",
+    "subClassOf" : ":Transportation"
+  }, {
+    "@id" : ":TrustedExecutionEnvironment",
+    "@type" : [ ":NetworkComponent", "owl:NamedIndividual" ],
+    "rdfs:label" : "TrustedExecutionEnvironment"
+  }, {
+    "@id" : ":UseCase",
+    "@type" : "owl:Class",
+    "rdfs:label" : "UseCase",
+    "subClassOf" : "owl:Thing"
+  }, {
+    "@id" : ":UserInterface",
+    "@type" : "owl:Class",
+    "rdfs:label" : "UserInterface",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":Utilities",
+    "@type" : [ ":BusinessSector", "owl:NamedIndividual" ],
+    "rdfs:label" : "Utilities"
+  }, {
+    "@id" : ":VerificationAndValidation",
+    "@type" : "owl:Class",
+    "rdfs:label" : "VerificationAndValidation",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":VerificationAndValidationAttack",
+    "@type" : "owl:Class",
+    "rdfs:label" : "VerificationAndValidationAttack",
+    "subClassOf" : ":Attack"
+  }, {
+    "@id" : ":Voting",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Voting",
+    "subClassOf" : ":RecordKeeping"
+  }, {
+    "@id" : ":Vulnerability",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Vulnerability"
+  }, {
+    "@id" : ":W3C",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":Wallet",
+    "@type" : "owl:Class",
+    "rdfs:label" : "Wallet",
+    "subClassOf" : ":DLTComponent"
+  }, {
+    "@id" : ":WeakCryptography",
+    "@type" : "owl:Class",
+    "rdfs:label" : "WeakCryptography",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":WorldIntellectualPropertyOrganisation",
+    "@type" : [ ":InternationalStandardizationOrganization", "owl:NamedIndividual" ]
+  }, {
+    "@id" : ":canExploit",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "The canExploit property links an attack on a distributed ledger system or component to the respective vulnerability, which could be used by an attacker to enable further malicious activity in an effort to manipulate or gain control of the system.",
+    "domain" : ":Attack",
+    "rdfs:label" : "canAttack",
+    "range" : ":Vulnerability",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":comesFrom",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "It is entirely possible for several organizations of an industry form an initiative to steer and develop the future of distributed ledger technology within that industry in a common effort. This property shows the origins of an industry initiative with regards to the industry of involved parties.",
+    "domain" : ":IndustryInitiative",
+    "rdfs:label" : "comesFrom",
+    "range" : ":BusinessSector",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":controls",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Implemented controls can secure components and the entire system itself. This property links a technical or organizational control measure to a distributed ledger system or individual component.",
+    "domain" : [ ":OrganizationalControl", ":TechnicalControl" ],
+    "rdfs:label" : "controls",
+    "range" : [ ":DLTComponent", ":DLTSystem" ],
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":createsStandard",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Behind every normative reference material and standardization there is an organization with the needed authority to publish such material, which can be either a national institute or an international organization. This property links a standard to its organization.",
+    "domain" : ":StandardizationOrganization",
+    "rdfs:label" : "createsStandard",
+    "range" : ":Standard",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":dAppVulnerability",
+    "@type" : "owl:Class",
+    "rdfs:label" : "dAppVulnerability",
+    "subClassOf" : ":Vulnerability"
+  }, {
+    "@id" : ":hasBusinessSector",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Distributed ledger technology can be used to realize a variety of different use cases. However, not all of them are a fit for any field or industry. This property highlights the connection between a use case and the specific business sector/industry it is used in.",
+    "domain" : ":UseCase",
+    "rdfs:label" : "hasBusinessSector",
+    "range" : ":BusinessSector",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":hasComponent",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "It links an individual component to the DLT system. It is used to show what a system is comprised of and to get a better understanding of the elements and building blocks. Such an overview allows for an analysis or or the implementation of measures for a singular component specifically and to tailor solutions to certain requirements.",
+    "domain" : ":DLTSystem",
+    "rdfs:label" : "hasComponent",
+    "range" : ":DLTComponent",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":hasUseCase",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "This property is used to show which use cases could be used in a selected industry. Not all forms of usage of distributed ledger systems are fit for all types of business.",
+    "domain" : ":BusinessSector",
+    "rdfs:label" : "hasUseCase",
+    "range" : ":UseCase",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":hasVulnerability",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "This property indicates that one or multiple of the components used in a distributed ledger system carry with them one or an array of vulnerabilities. Having an overview of existing vulnerabilities is crucial for securing the system.",
+    "domain" : ":DLTComponent",
+    "rdfs:label" : "hasVulnerability",
+    "range" : ":Vulnerability",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":isCompliantTo",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "When it comes to using distributed ledger systems in an enterprise setting, national and/or international standardization can become a necessity. This property expresses compliance to existing standardization or normative references on a system or component level.",
+    "domain" : [ ":DLTSystem", ":DLTComponent" ],
+    "rdfs:label" : "isCompliantTo",
+    "range" : ":Standard",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":isRegulatedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "As with regular ICT-systems, a distributed ledger system will have to comply with the legal status of the respective country it is used in by any organization. This property connects existing legislation for ICT and DLT systems.",
+    "domain" : ":DLTSystem",
+    "rdfs:label" : "isRegulatedBy",
+    "range" : ":Law",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":isSpecializedFor",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Not all implementations of distributed ledger systems are the same or similar in their nature and complexion. This property links existing DLT systems which are tailored for the delivery of a specific use case.",
+    "domain" : ":DLTSystem",
+    "rdfs:label" : "isSpecializedFor",
+    "range" : ":UseCase",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":isUsedFor",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "There are certain distributed ledger systems that are specialized for the use in one specific field or industry. This property is used to highlight this exact relation.",
+    "domain" : ":DLTSystem",
+    "rdfs:label" : "isUsedFor",
+    "range" : ":BusinessSector",
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":mitigates",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Once disaster strikes, it is important to have a series of mitigations in place, to reduce the impact of an attack, malicious event or generally in case of the system breaking down. This property links a technical or organizational mitigation measure to a distributed ledger system or specific component.",
+    "domain" : [ ":OrganizationalMitigation", ":TechnicalMitigation" ],
+    "rdfs:label" : "mitigates",
+    "range" : [ ":DLTComponent", ":DLTSystem" ],
+    "subPropertyOf" : "owl:topObjectProperty"
+  }, {
+    "@id" : ":threatens",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "This property indicated that there is an existing attack on a distributed ledger system or one of its components. Attacks can manipulate specific components and data, or generally weaken the structural integrity of the entire system.",
+    "domain" : ":Attack",
+    "rdfs:label" : "threatens",
+    "range" : [ ":DLTSystem", ":DLTComponent" ],
+    "subPropertyOf" : "owl:topObjectProperty"
+  } ],
+  "@id" : "urn:x-arq:DefaultGraphNode",
+  "@context" : {
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "comment" : "http://www.w3.org/2000/01/rdf-schema#comment",
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "@base" : "https://w3id.org/DLTOntology#",
+    "" : "https://w3id.org/DLTOntology#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xml" : "http://www.w3.org/XML/1998/namespace",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+  }
+}

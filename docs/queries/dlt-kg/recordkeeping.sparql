@@ -1,0 +1,9 @@
+# Which types of record keeping could be realized with distributed ledger technology?
+# Datasource: https://dlt-ontology.github.io/ontology.nt; https://dlt-ontology.github.io/data.nt
+PREFIX dlt: <https://w3id.org/DLTOntology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?dltsystem ?usecase WHERE {
+  ?sys dlt:isSpecializedFor [a dlt:RecordKeeping ; rdfs:label ?usecase ] ;
+       rdfs:label ?dltsystem .
+}

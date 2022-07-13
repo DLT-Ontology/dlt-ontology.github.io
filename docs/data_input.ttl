@@ -1,0 +1,850 @@
+@prefix dlt: <https://w3id.org/DLTOntology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+
+
+### DLTSystem ###
+# Ethereum #
+<https://ethereum.org/> a dlt:DLTSystem ;
+    rdfs:label "Ethereum" ;
+    dct:creator "Vitalik Buterin" ;
+    dct:description "Ethereum is a decentralized, open-source blockchain with smart contract functionality. Ether is the native cryptocurrency of the platform." ;
+    dct:created "2015/07/30" ;
+    dlt:hasComponent _:blockchain ;
+    dlt:hasComponent _:dapp ;
+    dlt:hasComponent _:dao ;
+    dlt:hasComponent _:proofOfWork ;
+    dlt:hasComponent _:peer2Peer ;
+    dlt:isSpecializedFor _:ether ;
+    dlt:isUsedFor _:entertainmentSector .
+
+# R3 Corda #
+<https://www.corda.net/> a dlt:DLTSystem ;
+    rdfs:label "R3 Corda" ;
+    dct:creator "https://www.r3.com/" ;
+    dct:description "R3's Corda is a scalable, permissioned peer-to-peer (P2P) distributed ledger technology (DLT) platform that enables the building of applications that foster and deliver digital trust between parties in regulated markets." ;
+    dct:created "2014/4" ;
+    dlt:hasComponent _:peer2Peer ;
+    dlt:hasComponent _:blockchain ;
+    dlt:hasComponent _:cordaIdentityControl ;
+    dlt:hasComponent _:cordaNotaryConsensus ;
+    dlt:hasComponent _:cordaVault ;
+    #dlt:isSpecializedFor _:hierarchicalIdentity ;
+    #dlt:isSpecializedFor _:confidentialIdentity ;
+    #dlt:isSpecializedFor _:nonVerifiesKeys ;
+    dlt:isUsedFor _:financeSector.
+
+# Medical Blockchain - MedDAG #
+<https://pact.care/> a dlt:DLTSystem ;
+    rdfs:label "Pact" ;
+    dct:creator "Hawig, David and 
+                 Zhou, Chao and 
+                 Fuhrhop, Sebastian and 
+                 Fialho, Andre S and 
+                 Ramachandran, Navin" ;
+    dct:description "Pact Care was created with the mission to enable open, patient-centric and safe collaborations in healthcare. All our solutions align with the goal of breaking data silos, of increasing transparency and of enabling patients to be active participants in their care." ;
+    dct:created "2019-06-13"^^xsd:date ;
+    dct:source "https://www.jmir.org/2019/6/e13665/" ;
+    dlt:hasComponent _:tangleDAG ;
+    dlt:isSpecializedFor _:healthRecords ;
+    dlt:isRegulatedBy _:gdpr ;
+    dlt:isCompliantTo _:iso22857 ;
+    dlt:isUsedFor _:Healthcare .
+
+
+
+
+### DLTComponent ###
+## Data Structure ##
+# Blockchain #
+_:blockchain a dlt:DataStructure, dlt:DLTComponent ;
+    rdfs:label "Blockchain" ;
+    dct:creator "David Chaum" ;
+    dct:description "A blockchain is a growing list of records, called blocks, that are linked together using cryptography." ;
+    dct:created "1983" ;
+    dlt:hasVulnerability _:blockchainFork ;     
+    dlt:hasVulnerability _:staleBlocks .
+
+# DAG #
+_:tangleDAG a dlt:DataStructure, dlt:DLTComponent ;
+    rdfs:label "Tangle Directed Acyclic Graph" ;
+    dct:creator "Serguei Popov" ;
+    dct:description "Tangle is the DAG consensus algorithm used by Iota. In order to send an Iota transaction, you need to validate two previous transactions you've received" ;
+    dct:created "2018-04-30"^^xsd:date ;
+    dct:source "https://assets.ctfassets.net/r1dr6vzfxhev/2t4uxvsIqk0EUau6g2sw0g/45eae33637ca92f85dd9f4a3a218e1ec/iota1_4_3.pdf" .
+
+
+## Smart Contract ##
+_:dapp a dlt:SmartContract, dlt:DLTComponent ;
+    rdfs:label "Ethereum Distributed Application" ;
+    dct:description "Smart contracts digitize agreements by turning the terms of an agreement into computer code that automatically executes when the contract terms are met." ;
+    dlt:hasVulnerability _:SmartContractVulnerability .
+
+# DAO Smart Contract #
+_:dao a dlt:SmartContract, dlt:DLTComponent;
+    rdfs:label "Decentralized Autonomous Organization" ;
+    dct:description "A DAO is an organization that is collectively owned and managed by its members. It's functionality is based on smart contracts." ;
+    dlt:hasVulnerability _:codeVulnerability ;
+    dlt:hasVulnerability _:raceAttack ;
+    dlt:hasVulnerability _:recursiveCallingVulnerability .
+
+
+
+## Consensus Algorithm ##
+_:proofOfWork a dlt:ConsensusAlgorithm, dlt:DLTComponent ;
+   rdfs:label "Proof-of-Work";
+   dct:creator "Cynthia Dwork and Moni Naor" ;
+   dct:description "Proof of work (PoW) is a form of cryptographic proof in which one party (the prover) proves to others (the verifiers) that a certain amount of a specific computational effort has been expended. " ;
+   dct:created "1993" ;
+   dlt:hasVulnerability dlt:ConsensusVulnerability .
+
+_:cordaNotaryConsensus a dlt:ConsensusAlgorithm, dlt:DLTComponent ;
+    rdfs:label "Corda Notary Consensus" ;
+    dct:creator "https://www.corda.net/" ;
+    dct:description "Consensus algorithms are a hot area of research and new algorithms are frequently developed that improve upon the state of the art. Unlike most distributed ledger systems Corda does not tightly integrate one specific approach. This is not only to support upgrades as new algorithms are developed, but also to reflect the fact that different tradeoffs may make sense for different situations and networks." .
+
+
+## Network ##
+_:peer2Peer a dlt:NetworkComponent, dlt:DLTComponent ;
+   rdfs:label "Peer-to-Peer Network";
+   dct:creator "Shawn Fanning and Sean Parker" ;
+   dct:description "Peer-to-peer (P2P) computing or networking is a distributed application architecture that partitions tasks or workloads between peers." ;
+   dct:created "1999/06/01" ;
+   dlt:hasVulnerability dlt:NetworkVulnerability .
+
+## Permission Control ##
+_:cordaIdentityControl a dlt:PermissionControl, dlt:DLTComponent ;
+    rdfs:label "Identity Control" ;
+    dct:description "In all decentralised ledger systems data access is controlled using asymmetric key pairs. Because public keys are difficult for humans to reliably remember or write down, a naming layer is added on top based on X.509 certificate hierarchies rooted at a single certificate authority for each network (see §3.2)." .
+
+## Wallet ##
+_:cordaVault a dlt:Wallet, dlt:DLTComponent ;
+    rdfs:label "The Vault" ;
+    dct:creator "https://www.corda.net/" ;
+    dct:description "The vault contains data extracted from the ledger that is considered relevant to the node’s owner, stored in a form that can be easily queried and worked with. " .
+
+
+
+
+### Vulnerability ###
+## Structure Vulnerability ##
+# Blockchain Fork #
+_:blockchainFork a dlt:DataStructureVulnerability, dlt:Vulnerability ;
+    rdfs:label "Blockchain Fork" ;
+    dct:description "A Blockchain fork constitutes a split of the main chain. The resulting forks all trace back to the so called Genesis Block, which indicates the last common block. " .
+
+# Stale and Orphaned Blocks #
+_:staleBlocks a dlt:DataStructureVulnerability, dlt:Vulnerability ;
+    rdfs:label "Stale and Orphaned Blocks" ;
+    dct:description "Stale and Orphan Blocks are validated blocks that end up outside of the main blockchain." .
+
+
+## Consensus Vulnerability ##
+# Double-Spending #
+_:doubleSpending a dlt:ConsensusVulnerability, dlt:Vulnerability ;
+    rdfs:label "Double-Spending Vulnerability" ;
+    dct:description "Double-spending is a potential flaw in a digital cash scheme in which the same single digital token can be spent more than once." .
+
+# Reward for Uncle Blocks #
+_:rewardForUncle a dlt:ConsensusVulnerability, dlt:Vulnerability ;
+    rdfs:label "Reward for Uncle Blocks" ;
+    dct:description "Rewards for uncle blocks refers to a vulnerability of the reward mechanism of Ethereum that incited to selfish mining. Ethereum has an additional reward feature on top of regular block rewards, called uncle and nephew rewards" .
+
+
+## Smart Contract Vulnerability ##
+# VulnerableCode #
+_:codeVulnerability a dlt:SmartContractVulnerability, dlt:Vulnerability ;
+    rdfs:label "Vulnerable Code" ;
+    dct:description "Weak or Vulnerable Code that lacks sufficient input validation, data sanitation, or has flaws in its code that can be exploited." .
+
+# RecursiveCallingVulnerability #
+_:recursiveCallingVulnerability a dlt:SmartContractVulnerability, dlt:Vulnerability ;
+    rdfs:label "Recursive Calling Vulnerability" ;
+    dct:description "A nested function call that is meant to exploit a vulnerability in the code of a smart contract." .
+
+# Withholding Vulnerability #
+_:withholdingVulnerability a dlt:NetworkVulnerability, dlt:Vulnerability ;
+    rdfs:label "Block Withholding Vulnerability" ;
+    dct:description "Blocks can be withheld by malicious miners or mining pools to be released at a time of their convenience. This can cause disruptions and confusion to the network, destabilize it and possibly be the cause of a fork of the chain." .
+
+
+
+
+
+
+### Attack ###
+## ConsensusAttack ##
+# Majority-Attacks/51% #
+_:majorityAttack a dlt:ConsensusAttack, dlt:Attack ;
+    rdfs:label "Majority/51% Attack" ;
+    dct:description "The 51%-Attack, constitutes an attack on the consensus algorithm of a blockchain application. The adversary attempts to take over the network by controlling the majority of nodes, or more than 50% of the total computation power in the network." ;
+    dlt:canExploit dlt:ConsensusVulnerability .
+
+_:raceAttack a dlt:ConsensusAttack, dlt:Attack ;
+    rdfs:label "Race Attack" ;
+    dct:description "A malicious actor initiates two different transactions at the same time, referring to the same funds that are only sufficient for one transaction. Only one of these transactions can be validated. This enables the attacker to retrieve double the amount of goods for the same amount of money, if both receivers don't validate first." ;
+    dlt:canExploit dlt:ConsensusVulnerability .
+
+_:finneyAttack a dlt:ConsensusAttack, dlt:Attack ;
+    rdfs:label "Finney Attack" ;
+    dct:description "During a Finney Attack, funds are used in a transaction, but the attacker is withholding a pre-prepared block with the same transaction to one of his own accounts. When the shop releases the goods, the attacker broadcasts his block which then invalidates the initial transaction by making the network believe that the actual transaction is the one that has been pre-prepared." ;
+    dlt:canExploit dlt:ConsensusVulnerability .
+
+# Selfish Mining #
+_:selfishMining a dlt:ConsensusAttack, dlt:Attack ;
+    rdfs:label "Selfish Mining" ;
+    dct:description "Selfish mining is a deceitful cryptocurrency mining strategy in which one miner or a group solves a hash, opens a new block, and withholds it from the public blockchain. This action creates a fork, which is then mined to get ahead of the public blockchain." ;
+    dlt:canExploit _:rewardForUncle .
+
+
+## Data Structure Attacks ##
+# Replay Attack #
+_:replayAttack a dlt:DataStructureAttack, dlt:Attack ;
+    rdfs:label "Replay Attack" ;
+    dct:description "A replay attack is an exploit that can occur when two forked cryptocurrencies allow transactions to be valid across both chains." ;
+    dlt:canExploit _:blockchainFork .
+
+## Smart Contract Attacks #
+# Reentrancy Attack #
+_:reentrancyAttack a dlt:SmartContractAttack, dlt:Attack ;
+    rdfs:label "Reentrancy Attack" ;
+    dct:description "Attacks could be conducted by specifically crafted contracts that call withdrawing functions, leading to the possibility of being able to withdraw more times than it should be possible to do so." ;
+    dlt:canExploit _:codeVulnerability .
+
+# Forcible Balance Transfer #
+_:forcibleBalanceTransfer a dlt:SmartContractAttack, dlt:Attack ;
+    rdfs:label "Forcible Balance Transfer" ;
+    dct:description "If there is badly written code or purposely created vulnerabilities that transfer balance without fallback functions, it can lead to failing transactions. The money spent in such a way is therefore lost." ;
+    dlt:canExploit _:codeVulnerability .
+
+# DAO Attack #
+_:daoHack a dlt:SmartContractAttack, dlt:Attack ;
+    rdfs:label "The DAO Attack" ;
+    dct:description "The DAO Attack uses a combination of a race attack and recursive function calls to empty the funds of a DAO." ;
+    dlt:canExploit _:recursiveCallingVulnerability ;
+    dlt:canExploit _:codeVulnerability ;
+    dlt:threatens _:dao ;
+    dlt:threatens _:ethereum .
+
+
+## Network Attacks ##
+# Eclipse Attack #
+_:eclipseAttack a dlt:NetworkAttack, dlt:Attack ;
+    rdfs:label "Eclipse Attack" ;
+    dct:description "An Eclipse attack focuses on the peer-to-peer component of blockchains. The goal is to isolate a victim from a legitimate network by making them connect only to nodes that are under the attacker's control until the maximum connection limit is reached. Afterwards it is much easier to start further attacks on the now shielded victim. " ;
+    dlt:canExploit dlt:NetworkVulnerability .
+
+# Block Withholding Attack #
+_:withholdingAttack a dlt:NetworkAttack, dlt:Attack ;
+    rdfs:label "Block Withholding Attack" ;
+    dct:description "A member of a mining pool can intentionally withhold a forged block from the rest of the pool and publish it as individual user, or a block can be withheld until a second legitimate block is generated for them to be released near simultaneously to confuse the network make further attacks possible." ;
+    dlt:canExploit _:withholdingVulnerability .
+
+# Sybil Attack
+_:sybilAttack a dlt:NetworkAttack, dlt:Attack ;
+    rdfs:label "Sybil Attack" ;
+    dct:description "A Sybil Attack is an identity-based Attack and threatens the peer-to-peer network. Communication amongst the peers in a blockchain network works so that a node gets his information from other surrounding nodes. An adversary can create many fake identities so that all connections from the victim will be established with the attacker." ;
+    dlt:canExploit dlt:NetworkVulnerability .
+
+
+
+
+
+
+
+### Use Case ###
+## DigitalCurrency ##
+_:ether a dlt:DigitalCurrency, dlt:UseCase ;
+    rdfs:label "Ether" ;
+    dct:description "Ether (ETH) is the cryptocurrency generated by the Ethereum protocol as a reward to miners in a proof-of-work system for adding blocks to the blockchain." ;
+    dlt:hasBusinessSector _:financeSector .
+
+_:stableCoins a dlt:DigitalCurrency, dlt:UseCase ;
+    rdfs:label "Tokenization and stable coins" ;
+    dct:description "The digitization of regulated financial products and services such as security/asset tokens and utility tokens and create new ones, e.g., cryptocurrency/payment tokens through tokenisation." ;
+    dct:source _:ituD2_1 .
+
+_:funding a dlt:Microfinance, dlt:DigitalCurrency, dlt:UseCase ;
+    rdfs:label "Funding" ;
+    dct:description "DLT creates new revenue opportunities such as new models of funding and new types of markets such as equity crowdfunding, secondary market or new types of exchanges." ;
+    dct:source _:ituD2_1 .
+
+_:lending a dlt:Microfinance, dlt:DigitalCurrency, dlt:UseCase ;
+    rdfs:label "Payments and P2P transactions" ;
+    dct:description "DLTs can bring new models and arrangements to make payments and transfers faster with lower costs and less or no intermediaries. E.g., remodelling correspondent banking, cross-border payments, etc." ;
+    dct:source _:ituD2_1 .
+
+
+## Financial Services and Trading ##
+_:investment a dlt:FinancialServicesAndTrading, dlt:UseCase ;
+    rdfs:label "Investments" ;
+    dct:description "Tokenised assets can support the transformation of the regular investments model and promote accessibility to new asset investments." ;
+    dct:source _:ituD2_1 .
+
+_:accounting a dlt:FinancialServicesAndTrading, dlt:UseCase ;
+    rdfs:label "Financial management (accounting and auditing)" ;
+    dct:description "Smart contracts can automate some accounting processes. Auditing costs can be reduced through cheaper verification of transactions in DLT." ;
+    dct:source _:ituD2_1 .
+
+
+## Distributed Computing ##
+_:distributedComputing a dlt:DistributedComputing, dlt:UseCase ;
+    rdfs:label "Reduction in hte risk of fraud" ;
+    dct:description "Real time data is decentralised and this can increase trust of the shared data, e.g., management of cash or financial controls, data of maritime industry for insurance purposes, etc." ;
+    dct:source _:ituD2_1 .
+
+
+## Record Keeping ##
+_:audit a dlt:AuditTrail, dlt:RecordKeeping, dlt:UseCase ;
+    rdfs:label "Regulatory compliance and audit" ;
+    dct:description "DLTs can provide accurate and tamper-proof financial, audit and regulatory reports thereby improving speed and quality." ;
+    dct:source _:ituD2_1 .
+
+_:healthRecords a dlt:Ownership, dlt:RecordKeeping, dlt:UseCase ;
+    rdfs:label "Blockchain for Health Data Records" ;
+    dct:description "The blockchain is used for empowerment of the people, user centralized data generation, and for the consistency of health records" ;
+    dct:source _:ituD2_1 .
+
+_:diplomaVerification a dlt:Ownership, dlt:RecordKeeping, dlt:UseCase ;
+    rdfs:label "Diploma Verification" ;
+    dct:description "University of Geneva, Switzerland - A pilot application has been developed that uses a legally regulated seal and a timestamp on a public blockchain (Ethereum) to prove the authenticity of a diploma. The document is verified by using the original PDF/A-file or a short summary of the diploma. The use of a public blockchain ensures that the diploma can be proven even in the case of the university not being able to confirm its validity anymore." ;
+    dct:source _:ituD2_1 .
+
+_:dataAccountability a dlt:AuditTrail, dlt:RecordKeeping, dlt:UseCase ;
+    rdfs:label "Smart contracts for data accountability and provenance tracking" ;
+    dct:description "In light of the GDPR requirements, this use case propose the use of a blockchain-based approach to support data accountability and provenance tracking." ;
+    dct:source _:ituD2_1 .
+
+
+## Digital Identity ##
+_:IDVerification a dlt:DigitalIdentity, dlt:PrivacyAndIdentity, dlt:UseCase ;
+    rdfs:label "ID verification (KYC/AML)" ;
+    dct:description "DLTs can provide a trusted way to do customer verification to satisfy KYC (Know your Customer) and AML (Anti-Money Laundering) obligations, e.g., through past immutable data in the DLT." ;
+    dct:source _:ituD2_1 .
+
+_:authotizationSignatures a dlt:IdentityAndAccessControlSystems, dlt:PrivacyAndIdentity, dlt:UseCase ;
+    rdfs:label "Improving governance authenticating identities, authorization signatures and digital content" ;
+    dct:description "OriginalMy Blockchain OÜ, Estonia - This approach is trustful because it improves the overall e-Governance reducing costs and saving time, is flexible to address an array of risk and compliance needs, performs traceability of all digital acts performed and has the security provided by blockchain cryptography protocols." ;
+    dct:source _:ituD2_1 .
+
+_:nationalIdentityNetwork a dlt:DigitalIdentity, dlt:PrivacyAndIdentity, dlt:UseCase ;
+    rdfs:label "National identity network" ;
+    dct:description "Alastria Association, Spain - Alastria is the first multisectoral Association promoted by organizations and institutions for the establishment of a public Blockchain/DLT infrastructure, supporting services with legal effectiveness in the Spanish scope and according with the European regulation." ;
+    dct:source _:ituD2_1 .
+
+_:IDaaS a dlt:DigitalIdentity, dlt:PrivacyAndIdentity, dlt:UseCase ;
+    rdfs:label "Digital identity as a service" ;
+    dct:description "This use case is a proposal to implement Digital identity with the use of DLT and use it as a service." ;
+    dct:source _:ituD2_1 .
+
+_:bootstrapID a dlt:DigitalIdentity, dlt:PrivacyAndIdentity, dlt:UseCase ;
+    rdfs:label "Using human factors and a social graph to bootstrap ID" ;
+    dct:description "Self-sovereign ID using a social bootstrapping mechanism (using a plurality of attestations) allow humans to self-initialize identification. This aids in identification of displaced people/refugees. Once ID layer is initialized; allow additional attestations for education, professional certifications, or other relevant social data points." ;
+    dct:source _:ituD2_1 .
+
+
+## Contractual Use ##
+_:settlements a dlt:LegalContracts, dlt:ContractualUse, dlt:UseCase ;
+    rdfs:label "Clearing and settlement" ;
+    dct:description "Automation and improvement of the centralized clearing and settlement processes using DLT can result in increased efficiency and reduction of costs, time and agents involved." ;
+    dct:source _:ituD2_1 .
+
+_:insurance a dlt:LegalContracts, dlt:ContractualUse, dlt:UseCase ;
+    rdfs:label "New insurance models" ;
+    dct:description "New peer-to-peer insurance models can be secured with DLT." ;
+    dct:source _:ituD2_1 .
+
+_:mobileServiceProvider a dlt:BusinessProcesses, dlt:ContractualUse, dlt:UseCase ;
+    rdfs:label "Global market place for mobile operators and service providers" ;
+    dct:description "The main goal is to enable mobile operators and service providers to interact directly and securely without any agreements, intermediators and complex integration via smart contracts." ;
+    dct:source _:ituD2_1 .
+
+_:autoICT a dlt:BusinessProcesses, dlt:ContractualUse, dlt:UseCase ;
+    rdfs:label "Automatic discovery, quote, ordering and settlement in a mesh of interconnected ICT service providers" ;
+    dct:description "Automatic Discovery, Quote, Ordering and Settlement in a Mesh of Interconnected ICT Service Providers resulting in a significant decrease in time compared to legacy manual processes." ;
+    dct:source _:ituD2_1 .
+
+_:voiceCallSettlements a dlt:BusinessProcesses, dlt:ContractualUse, dlt:UseCase ;
+    rdfs:label "Wholesale voice settlement" ;
+    dct:description "Settlement generally relies on third party clearing houses, to whom carriers must disclose sensitive commercial data and who charge a fee." ;
+    dct:source _:ituD2_1 .
+
+_:provisioningVPN a dlt:BusinessProcesses, dlt:ContractualUse, dlt:UseCase ;
+    rdfs:label "Distributed ledger based online trading system for cross-domain VPN provision" ;
+    dct:description "DLT is used for on-demand VPN connection setup across different domains." ;
+    dct:source _:ituD2_1 .
+
+_:numberManagement a dlt:BusinessProcesses, dlt:ContractualUse, dlt:UseCase ;
+    rdfs:label "DLT for number assignment, services and number portability" ;
+    dct:description "Solution for global number and service portability that provides fast cost effective and scalable technology for global services deployment." ;
+    dct:source _:ituD2_1 .
+
+
+## Supply Chain ##
+_:pharmaSupplyChainFinance a dlt:IndicationOfSource, dlt:SupplyChain, dlt:UseCase ;
+    rdfs:label "Supply chain finance in pharmaceutical industry with DLT" ;
+    dct:description "This use case is a proposal to trace the logistics of medicines and provide lower-cost financial support for the trader on pharmaceutical industry chain. In traditional pharmaceutical supply chain, we see the issues like fake medicines, fragmented medical logistics, untransparency of trading processes and restriction of credit grantees for SMEs." ;
+    dct:source _:ituD2_1 .
+
+_:vaccineSupplyChain a dlt:Tracking, dlt:SupplyChain, dlt:UseCase ;
+    rdfs:label "Blockchain web/mobile application for vaccine supply chain" ;
+    dct:description "Developing countries face challenges in the vaccine supply chain. The Challenges threaten vaccine access, availability, and quality. As countries adopt newer and more expensive vaccines and attempt to reach people at different ages and in new settings, the supply chain must be optimized. Information about demand, stock-levels and timely use of vaccines is poorly kept affecting timely supply leading to expirees and/or lack of needed vaccines." ;
+    dct:source _:ituD2_1 .
+
+_:drugsDLT a dlt:Tracking, dlt:SupplyChain, dlt:UseCase ;
+    rdfs:label "Drugs Distributed Ledger" ;
+    dct:description "The implementation of DLT solution, which allows tracking medical treatments and provides the necessary reports can reduce paperwork and increase common efficiency." ;
+    dct:source _:ituD2_1 .
+
+_:reverseLogistics a dlt:IndicationOfSource, dlt:SupplyChain, dlt:UseCase ;
+    rdfs:label "Reverse logistics credits" ;
+    dct:description "Post-consumption waste Reverse logistics compensation scheme using DLT as infrastructure to issue Reverse Logistics Credits, which can be used by companies wishing to offset and incentivise the recycling of the waste generated by the consumption of the products they sell to the public." ;
+    dct:source _:ituD2_1 .
+
+_:goldEcosystem a dlt:Tracking, dlt:SupplyChain, dlt:UseCase ;
+    rdfs:label "Responsible gold ecosystem" ;
+    dct:description "The Ecosystem helps enhance integrity in the global gold supply chain by using DLT to irrefutably and immutably record ethical provenance and chain of custody from mine, to refinery, to vault or fabricator." ;
+    dct:source _:ituD2_1 .
+
+_:foodSupplyChain a dlt:Tracking, dlt:SupplyChain, dlt:UseCase ;
+    rdfs:label "Traceability in the food supply chain in Brazil" ;
+    dct:description "The integration of DLT to Safe Trace's system provides transparency, reliability and immutability of data to all relevant stakeholder in the beef supply chain." ;
+    dct:source _:ituD2_1 .
+
+_:customsManagement a dlt:Tracking, dlt:SupplyChain, dlt:UseCase ;
+    rdfs:label "Trade facilitation and customs management" ;
+    dct:description "DLT helps to ensure the integrity of data and to maintain trust among the parties involved in the international shipment of containers goods." ;
+    dct:source _:ituD2_1 .
+
+_:logisticCorridor a dlt:Tracking, dlt:SupplyChain, dlt:UseCase ;
+    rdfs:label "Multimodal logistic corridor" ;
+    dct:description "A logistic corridor designed within the most modern and rigorous criteria of infrastructure, technology and sustainability that promotes innovation and contribution to the progress of a new industrial age." ;
+    dct:source _:ituD2_1 .
+
+
+## Human Rights and Contributions ##
+_:medicalDonation a dlt:Donations, dlt:HumanRightsAndContributions, dlt:UseCase ;
+    rdfs:label "Blockchain for bone marrow, blood and organ donation" ;
+    dct:description "LifeBlocs is a start-up that aims to increase blood, bone marrow, and organ donations, and optimize the matching process between donors and receivers." ;
+    dct:source _:ituD2_1 .
+
+_:fundraising a dlt:Donations, dlt:HumanRightsAndContributions, dlt:UseCase ;
+    rdfs:label "Accountability and transparency in fundraising" ;
+    dct:description "The payments process from BNDES to its Clients was the choice to be recorded on Trubudget blockchain in the Pilot Phase." ;
+    dct:source _:ituD2_1 .
+
+_:carbonRemoval a dlt:NGO, dlt:HumanRightsAndContributions, dlt:UseCase ;
+    rdfs:label "Carbon removal marketplace" ;
+    dct:description "A simple and scalable system that allows even small carbon removers to monetize their activity could see the emergence of a trillion dollar carbon removal industry." ;
+    dct:source _:ituD2_1 .
+
+
+## Cybersecurity ##
+_:DDoSMitigation a dlt:Cybersecurity, dlt:UseCase ;
+    rdfs:label "Distributed Ledger based online trading system for DDoS mitigation services" ;
+    dct:description "By using DLT, it's much easier to mitigate attack at the point of attack sources, and prevents the attack traffic from consuming bandwidth resources of the intermediate networks." ;
+    dct:source _:ituD2_1 .
+
+_:decentralizedPKI a dlt:Cybersecurity, dlt:UseCase ;
+    rdfs:label "DLT based decentralized public key infrastructure" ;
+    dct:description "By using DLT, a decentralized PKI system can be built without highly centralized root CA, and avoid the single point of failure problem." ;
+    dct:source _:ituD2_1 .
+
+
+## Power Management ##
+_:energyDistribution a dlt:SmartMeter, dlt:PowerManagement, dlt:UseCase ;
+    rdfs:label "Energy distribution with the use of smart contracts" ;
+    dct:description "Energy produced by a prosumer may be saved in the user's local battery for later use or may be immediately injected in the local grid." ;
+    dct:source _:ituD2_1 .
+
+_:energyTrading a dlt:SmartMeter, dlt:PowerManagement, dlt:UseCase ;
+    rdfs:label "P2P energy trading" ;
+    dct:description "Allowing Prosumers to trade the energy from their Distributed Energy Resources (DERs) like solar panels, batteries and electrical vehicles in a peer-to-peer transactive network (P2P TE)." ;
+    dct:source _:ituD2_1 .
+
+
+## IoT ##
+_:pigFarm a dlt:IoTEcosystem, dlt:IoT, dlt:UseCase ;
+    rdfs:label "Pig farm monitoring & data traceability" ;
+    dct:description "The system can automatically record the environmental, physiological and feeding data and enables efficient and trusted data storage and sharing among stakeholders." ;
+    dct:source _:ituD2_1 .
+
+
+## Governmental Services ##
+_:governmentPetitions a dlt:EVoting, dlt:GovernmentalServices, dlt:UseCase ;
+    rdfs:label "Lawmaking" ;
+    dct:description "In this way, members of the public can draft and sign petitions in a way that is verifiable and secure." ;
+    dct:source _:ituD2_1 .
+
+_:taxCompliance a dlt:GovernmentalServices, dlt:UseCase ;
+    rdfs:label "Real time tax compliance" ;
+    dct:description "This technology supports individuals, corporations, and governments in building powerful but simple solutions to complex problems. OpenLaw supports, but is not limited to, use cases such as automatic tax collection and alternative dispute resolution that help communities by making sure public services can be paid for and access to justice." ;
+    dct:source _:ituD2_1 .
+
+
+## Entertainment ##
+_:artAndCulture a dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "DLT as objects of art, design and culture domains" ;
+    dct:description "In the art, design and culture domain, DLTs serve as an emerging medium and material for artistic creation and production (crypto-native-artifacts, materialized coins, design experiments and performances with smart contracts, mining rigs as hardware sculptures and objects) probing the promises, fears and expectations about the future infrastructure and medium of exchange." ;
+    dct:source _:ituD2_1 .
+
+_:cryptoArtAssets a dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Crypto-native-artifacts as art assets, installations and performances" ;
+    dct:description "Artists are exploring various ways of materializing tokens, hashes and smart contracts by embedding them with unique characteristics. Examples include coins/tokens stamped with the blood of the artist or hashes of coins sold as light art installation objects (Kevin Abosch), mining algorithms and rings materialized as artistic hardware or sculptures and embedded in traditional art objects (Bittercoin, Bitcoin of Things, painting frames “Untitled Mining Installation”)." ;
+    dct:source _:ituD2_1 .
+
+_:collectibleNFT a dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Crypto-collectibles, puzzles, rare objects and cryptoart" ;
+    dct:description "DLTs support so-called rare digital artworks (''rares'') or trading cards with unique non-fungible tokens (NFTs) supporting the idea of digital scarcity (CryptoKitties, CryptoPunks, Dada.nyc, SuperRare, Tarasca). DLTs can also facilitate a form of murals as puzzles that reveal a code for some cryptocurrency prize (Pascal Boyart)." ;
+    dct:source _:ituD2_1 .
+
+_:artisticCoOp a dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Supporting co-op models for artistic creation" ;
+    dct:description "Artists and activists explore the potential of DLTs to enable co-ownership, artistic cryptocurrency and co-ops in various domains (music, art, tangible and intangible objects)." ;
+    dct:source _:ituD2_1 .
+
+_:artOwnership a dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Decentralization and fragmentation of ownership and new art markets" ;
+    dct:description "DLTs allow art objects to be digitally fragmented and offered as shares in artworks which support new forms of art auctioning but also co-ownership of artworks and collections." ;
+    dct:source _:ituD2_1 .
+
+_:artContractors a dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Contracting and payments to performers, production staff, and others" ;
+    dct:description "Many workers in the arts and entertainment industries operate on a freelance or per-gig basis. DLTs can streamline contracting, payment and employment records with any number of DLT-based notarization tools." ;
+    dct:source _:ituD2_1 .
+
+_:professionalQualifications a dlt:MusicIndustry, dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Credential wallet for professional qualifications, experience and other data" ;
+    dct:description "Professional qualifications and records of experience (Myceliaformusic.com, Musicwontstop.com) allow for performers and creatives to track their collaborations and create a record or passport of their career and achievements. Collating professional achievements in this way facilitates reputation management, charting networks, collaborations and guest performances in the real-world ecosystem of professional arts practice." ;
+    dct:source _:ituD2_1 .
+
+_:royalties a dlt:MusicIndustry, dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Traceability, attribution and royalties" ;
+    dct:description "Where digital artifacts of performances are available, ownership and royalties due can be asserted via DLT (Soundac). It is worth noting that existing systems are poor at tracking and collecting royalty payments on the part of creators." ;
+    dct:source _:ituD2_1 .
+
+_:digitalPerformance a dlt:Streaming, dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Performance on digital decentralized platforms" ;
+    dct:description "Given the context of IP theft and the fair concern with copyright and income protection on the part of creatives, there is a growth in DLT-based online performance outlets. A number of new streaming platforms facilitate alternative performance opportunities with direct payment to creators." ;
+    dct:source _:ituD2_1 .
+
+_:decentralizedTournaments a dlt:Gaming, dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Hosting decentralized tournaments for non-elite players" ;
+    dct:description "Previously, only a handful of elite players could compete for the prize pools associated with tournaments, pushing smaller players out of the game. Now, DLT based tournaments allow players to run their own small peer-to-peer tournaments." ;
+    dct:source _:ituD2_1 .
+
+_:reputationManagement a dlt:Gaming, dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Reputation Management" ;
+    dct:description "eSports can also include reputation management mechanisms. DLT provides decentralized and scalable computing resources to augment developers' infrastructure and provide mechanisms to mitigate cheating, downtime, and costly maintenance that would be a result of using traditional means." ;
+    dct:source _:ituD2_1 .
+
+_:communityRewards a dlt:Gaming, dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Community involvement and rewards" ;
+    dct:description "Contributors of high quality content are generally rewarded with tokens, which may then be used to access other services within the platform. In DLT systems, token holders will also be able to liquidate their tokens to fiat currencies or use cross-gaming tokens within the ecosystem to access other games." ;
+    dct:source _:ituD2_1 .
+
+_:facilitateBetting a dlt:Gambling, dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Facilitate betting and increasing security" ;
+    dct:description "Betting is an extremely popular byproduct of eSports tournaments and accounts for a good deal of income in the space. For example, the NFL brought in US$13 bn in 2017 while NFL fantasy leagues and betting brought in more than US$50 bn." ;
+    dct:source _:ituD2_1 .
+
+_:reduceForgery a dlt:Gaming, dlt:Entertainment, dlt:UseCase ;
+    rdfs:label "Reduce forgery" ;
+    dct:description "The sale of gamer-earned goods is a huge source of contention in the gaming industry, with payment often being forged and people sometimes being conned out of their hard-earned reward. Use of DLT can certainly be employed here to increase trust and reliability when it comes to making money out of the time and effort spent playing a game." ;
+    dct:source _:ituD2_1 .
+
+
+
+
+
+
+
+
+
+### Business Sectors ###
+# Finance #
+_:financeSector a dlt:BusinessSector ;
+    rdfs:label "Finance" ;
+    dlt:hasUseCase _:ether ;
+    dlt:hasUseCase _:stableCoins ;
+    dlt:hasUseCase _:funding ;
+    dlt:hasUseCase _:lending ;
+    dlt:hasUseCase _:investment ;
+    dlt:hasUseCase _:accounting ;
+    dlt:hasUseCase _:distributedComputing ;
+    dlt:hasUseCase _:IDVerification ;
+    dlt:hasUseCase _:settlements ;
+    dlt:hasUseCase _:insurance ;
+    dlt:hasUseCase _:audit .
+
+# Healthcare #
+_:Healthcare a dlt:BusinessSector ;
+    rdfs:label "Healthcare" ;
+    dlt:hasUseCase _:drugsDLT ;
+    dlt:hasUseCase _:medicalDonation ;
+    dlt:hasUseCase _:healthRecords .
+
+# Pharmacy # 
+_:pharmaSector a dlt:BusinessSector ;
+    rdfs:label "Pharma Industry" ;
+    dlt:hasUseCase _:pharmaSupplyChainFinance ;
+    dlt:hasUseCase _:vaccineSupplyChain .
+
+# ICT #
+_:ICTSector a dlt:BusinessSector ;
+    rdfs:label "Information and Communication Technology" ;
+    dlt:hasUseCase _:mobileServiceProvider ;
+    dlt:hasUseCase _:autoICT ;
+    dlt:hasUseCase _:voiceCallSettlements ;
+    dlt:hasUseCase _:provisioningVPN ;
+    dlt:hasUseCase _:DDoSMitigation ;
+    dlt:hasUseCase _:numberManagement ;
+    dlt:hasUseCase _:IDaaS ;
+    dlt:hasUseCase _:bootstrapID ;
+    dlt:hasUseCase _:decentralizedPKI ;
+    dlt:hasUseCase _:dataAccountability .
+
+
+# Energy #
+_:energySector a dlt:BusinessSector ;
+    rdfs:label "Energy Sector" ;
+    dlt:hasUseCase _:energyDistribution ;
+    dlt:hasUseCase _:energyTrading .
+
+# Climate Industry #
+_:climateIndustry a dlt:BusinessSector ;
+    rdfs:label "Climate Industry" ;
+    dlt:hasUseCase _:reverseLogistics ;
+    dlt:hasUseCase _:carbonRemoval .
+
+# Supply Chain Management #
+_:supplyChainManagement a dlt:BusinessSector ;
+    rdfs:label "Supply Chain Management" ;
+    dlt:hasUseCase _:pigFarm ;
+    dlt:hasUseCase _:goldEcosystem ;
+    dlt:hasUseCase _:foodSupplyChain ;
+    dlt:hasUseCase _:customsManagement ;
+    dlt:hasUseCase _:logisticCorridor .
+
+# Government #
+_:publicSector a dlt:BusinessSector ;
+    rdfs:label "Government and Public Sector" ;
+    dlt:hasUseCase _:stableCoins ;
+    dlt:hasUseCase _:fundraising ;
+    dlt:hasUseCase _:governmentPetitions ;
+    dlt:hasUseCase _:taxCompliance ;
+    dlt:hasUseCase _:authotizationSignatures ;
+    dlt:hasUseCase _:diplomaVerification ;
+    dlt:hasUseCase _:nationalIdentityNetwork .
+
+# Entertainment #
+_:entertainmentSector a dlt:BusinessSector ;
+    rdfs:label "Entertainment: Arts, Culture and e-Sports" ;
+    dlt:hasUseCase _:artAndCulture ;
+    dlt:hasUseCase _:cryptoArtAssets ;
+    dlt:hasUseCase _:collectibleNFT ;
+    dlt:hasUseCase _:artisticCoOp ;
+    dlt:hasUseCase _:artOwnership ;
+    dlt:hasUseCase _:artContractors ;
+    dlt:hasUseCase _:professionalQualifications ;
+    dlt:hasUseCase _:royalties ;
+    dlt:hasUseCase _:digitalPerformance ;
+    dlt:hasUseCase _:decentralizedTournaments ;
+    dlt:hasUseCase _:reputationManagement ;
+    dlt:hasUseCase _:communityRewards ;
+    dlt:hasUseCase _:facilitateBetting ;
+    dlt:hasUseCase _:reduceForgery .
+
+
+
+
+
+
+
+
+
+
+
+
+### Standards ###
+<https://doi.org/10.6028/NIST.IR.8202> a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "https://doi.org/10.6028/NIST.IR.8202" ;
+    rdfs:label "NISTIR 8202 - Blockchain Technology Overview" ;
+    dct:created "2018-10-01"^^xsd:date ;
+    dct:creator "Dylan Yaga", "Peter Mell", "Nik Roby", "Karen Scarfone" ;
+    dct:abstract "Blockchains are tamper evident and tamper resistant digital ledgers implemented in a distributed fashion (i.e., without a central repository) and usually without a central authority (i.e., a bank, company, or government). At their basic level, they enable a community of users to record transactions in a shared ledger within that community, such that under normal operation of the blockchain network no transaction can be changed once published. This document provides a high-level technical overview of blockchain technology. The purpose is to help readers understand how blockchain technology works." .
+
+<https://www.nist.gov/> a dlt:StandardizationOrganization, dlt:NationalStandardizationOrganization  ;
+    rdfs:label "National Institute of Standards and Technology" ; 
+    dct:coverage wd:Q30 ;
+    dlt:createsStandard <https://doi.org/10.6028/NIST.IR.8202> .
+
+_:x9report a dlt:Standard, dlt:InformativeStandard ;
+    rdfs:label "ASC X9 Study Group Report" ;
+    dct:created "2018-04-06"^^xsd:date ;
+    dct:creator "Distributed Ledger and Blockchain Technology Study Group";
+    dct:source "https://x9.org/wp-content/uploads/2018/04/Distributed-Ledger-and-Blockchain-Technology-Study-Group-Report-FINAL.pdf" .
+
+<https://x9.org/> a dlt:StandardizationOrganization, dlt:NationalStandardizationOrganization  ;
+    rdfs:label "Accredited Standards Committee X9" ;
+    dct:coverage wd:Q30 ;
+    dlt:createsStandard _:x9report .
+
+_:iso23455 a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "ISO/TR 23455:2019" ;
+    rdfs:label "ISO/TR 23455:2019 Blockchain and distributed ledger technologies - Overview of and interactions between smart contracts in blockchain and distributed ledger technology systems" ;
+    dct:created "2019-09-01"^^xsd:date ;
+    dct:creator "ISO/TC 307 Blockchain and distributed ledger technologies" ;
+    dct:abstract "This document provides an overview of smart contracts in BC/DLT systems; describing what smart contracts are and how they work. It also discusses methods of interaction between multiple smart contracts. This document focuses on technical aspects of smart contracts. Smart contracts for legally binding use and applications will only be briefly mentioned in this document." .
+
+_:iso22857 a dlt:Standrad, dlt:InformativeStandard ;
+    dct:identifier "ISO 22857:2013" ;
+    rdfs:label "Health informatics - Guidelines on data protection to facilitate trans-border flows of personal health data" ;
+    dct:created "2013-12-01"^^xsd:date ;
+    dct:creator "ISO/TC 215 Health Informatics" .
+
+<https://www.iso.org/> a dlt:StandardizationOrganization, dlt:InternationalStandardizationOrganization  ;
+    rdfs:label "International Organization for Standardization" ;
+    dlt:createsStandard _:iso23455 .
+
+<https://dx.doi.org/10.31030/2791664> a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "DIN SPEC 16597" ;
+    rdfs:label "DIN SPEC 16597 Terminology for blockchains" ;
+    dct:created "2018-02-01"^^xsd:date .
+
+<https://dx.doi.org/10.31030/3055288> a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "DIN SPEC 3103" ;
+    rdfs:label "DIN SPEC 3103:2019-06 Blockchain and distributed ledger technologies in application scenarios for Industrie 4.0" ;
+    dct:created "2019-06-01"^^xsd:date ;
+    dct:references <https://dx.doi.org/10.31030/2791664> .
+    
+<https://dx.doi.org/10.31030/3042007> a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "DIN SPEC 3104" ;
+    rdfs:label "DIN SPEC 3104:2019-04 Blockchain-based validation of data" ;
+    dct:created "2019-04-01"^^xsd:date ;
+    dct:references <https://dx.doi.org/10.31030/2791664> .
+    
+<https://dx.doi.org/10.31030/3150128> a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "DIN SPEC 4996" ;
+    rdfs:label "DIN SPEC 4996:2020-04 Blockchain-based approach to the transfer of software licenses" ;
+    dct:created "2020-04-01"^^xsd:date ;
+    dct:references <https://dx.doi.org/10.31030/2791664> ;
+    dct:references <https://doi.org/10.6028/NIST.IR.8202> .
+    
+<https://dx.doi.org/10.31030/3150127> a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "DIN SPEC 4997" ;
+    rdfs:label "DIN SPEC 4997:2020-04 Privacy by Blockchain Design: A standardised model for processing personal data using blockchain technology" ;
+    dct:created "2019-04-01"^^xsd:date ;
+    dct:references _:ituD1_1 ;
+    dct:references <https://dx.doi.org/10.31030/3042007> .
+
+<https://www.din.de/> a dlt:StandardizationOrganization, dlt:NationalStandardizationOrganization  ;
+    rdfs:label "German Institute for Standardization" ;
+    dct:coverage wd:Q183 ;
+    dlt:createsStandard <https://dx.doi.org/10.31030/2791664> ;
+    dlt:createsStandard <https://dx.doi.org/10.31030/3055288> ;
+    dlt:createsStandard <https://dx.doi.org/10.31030/3042007> ;
+    dlt:createsStandard <https://dx.doi.org/10.31030/3150128> ;
+    dlt:createsStandard <https://dx.doi.org/10.31030/3150127> .
+
+<https://www.enisa.europa.eu/publications/blockchain-security> a dlt:Standard, dlt:InformativeStandard ;
+    rdfs:label "Distributed Ledger Technology & Cybersecurity - Improving information security in the financial sector" ;
+    dct:created "2017-01-18"^^xsd:date ;
+    dct:abstract "This paper aims to provide financial professionals in both business and technology roles with an assessment of the various benefits and challenges that their institutions may encounter when implementing a distributed ledger." .
+
+<https://www.enisa.europa.eu/> a dlt:StandardizationOrganization, dlt:InternationalStandardizationOrganization  ;
+    rdfs:label "The European Union Agency for Cybersecurity" ;
+    dct:coverage wd:Q458 ;
+    dlt:createsStandard <https://www.enisa.europa.eu/publications/blockchain-security> .
+
+_:bsi a dlt:Standard, dlt:InformativeStandard ;
+    rdfs:label "Towards Secure Blockchains - Concepts, Requirements, Assessments" ;
+    dct:created "2019-12-11"^^xsd:date ;
+    dct:abstract "In this document, the BSI studies blockchains primarily from the point of view of IT security, but also considers further implications of the basic technical design, e.g. on efficiency or compliance with requirements from data protection. In general, blockchains offer benefits as compared to databases in terms of availability and resilience against misuse, whereas they show disadvantages in terms of confidentiality and efficiency." .
+
+<https://www.bsi.bund.de/> a dlt:StandardizationOrganization, dlt:NationalStandardizationOrganization  ;
+    rdfs:label "German Federal Office for Information Security" ;
+    dct:coverage wd:Q183 ;
+    dlt:createsStandard _:bsi .
+
+_:ituD1_1 a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "FG DLT D1.1" ;
+    rdfs:label "DLT terms and definitions" ;
+    dct:created "2019-08-01"^^xsd:date ;
+    dct:references _:ituD2_1 ;
+    dct:references <https://doi.org/10.6028/NIST.IR.8202> .
+
+_:ituD1_2 a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "FG DLT D1.2" ;
+    rdfs:label "DLT overview, concepts, ecosystem" ;
+    dct:created "2019-08-01"^^xsd:date ;
+    dct:references _:ituD1_1 ;
+    dct:references <https://doi.org/10.6028/NIST.IR.8202> .
+
+_:ituD2_1 a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "FG DLT D2.1" ;
+    rdfs:label "DLT use cases" ;
+    dct:created "2019-08-01"^^xsd:date ;
+    dct:references _:ituD1_1 ;
+    dct:references _:ituD3_1 ;
+    dct:references _:ituD3_3 ;
+    dct:references _:ituD4_1 .
+
+_:ituD3_1 a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "FG DLT D3.1" ;
+    rdfs:label "DLT reference architecture" ;
+    dct:created "2019-08-01"^^xsd:date ;
+    dct:references _:ituD1_1 .
+
+_:ituD3_3 a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "FG DLT D3.3" ;
+    rdfs:label "Assessment criteria for DLT platforms" ;
+    dct:created "2019-08-01"^^xsd:date ;
+    dct:references _:ituD1_1 ;
+    dct:references _:ituD3_1 .
+
+_:ituD4_1 a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "FG DLT D4.1" ;
+    rdfs:label "DLT regulatory framework" ;
+    dct:created "2019-08-01"^^xsd:date ;
+    dct:references _:ituD1_1 .
+
+_:ituD5_1 a dlt:Standard, dlt:InformativeStandard ;
+    dct:identifier "FG DLT D5.1" ;
+    rdfs:label "Outlook on DLTs" ;
+    dct:created "2019-08-01"^^xsd:date ;
+    dct:references _:ituD1_1 ;
+    dct:references _:ituD1_3 ;
+    dct:references _:ituD2_1 ;
+    dct:references _:ituD3_3 ;
+    dct:references _:ituD4_1 .
+
+<https://www.itu.int/> a dlt:StandardizationOrganization, dlt:InternationalStandardizationOrganization  ;
+    rdfs:label "International Telecommunication Union" ; 
+    dlt:createsStandard _:ituD1_1, _:ituD1_2, _:ituD2_1, _:ituD3_1, _:ituD3_3, _:ituD4_1, _:ituD5_1 .
+
+_:cenelec a dlt:Standard, dlt:InformativeStandard ;
+    rdfs:label "Recommendations for Successful Adoption in Europe of Emerging Technical Standards on Distributed Ledger/Blockchain Technologies" ;
+    dct:created "2018-09-20"^^xsd:date .
+
+<http://www.cenelec.eu/> a dlt:StandardizationOrganization, dlt:InternationalStandardizationOrganization  ;
+    rdfs:label "European Committee for Electrotechnical Standardization" ;
+    dct:coverage wd:Q458 ;
+    dlt:createsStandard _:cenelec .
+
+
+
+
+
+
+### Laws ###
+_:gdpr a dlt:DataProtectionLaw, dlt:Law ;
+    rdfs:label "Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)" ;
+    dct:identifier "Regulation (EU) 2016/679" ; 
+    dct:created "2016-04-27"^^xsd:date ;
+    dct:creator "The European Parliament and the Council of the European Union" ;
+    dct:source "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679&from=DE" .
+

@@ -1,0 +1,746 @@
+<https://ethereum.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTSystem> .
+<https://ethereum.org/> <http://www.w3.org/2000/01/rdf-schema#label> "Ethereum" .
+<https://ethereum.org/> <http://purl.org/dc/terms/creator> "Vitalik Buterin" .
+<https://ethereum.org/> <http://purl.org/dc/terms/description> "Ethereum is a decentralized, open-source blockchain with smart contract functionality. Ether is the native cryptocurrency of the platform." .
+<https://ethereum.org/> <http://purl.org/dc/terms/created> "2015/07/30" .
+<https://ethereum.org/> <https://w3id.org/DLTOntology#hasComponent> _:genid1 .
+<https://ethereum.org/> <https://w3id.org/DLTOntology#hasComponent> _:genid2 .
+<https://ethereum.org/> <https://w3id.org/DLTOntology#hasComponent> _:genid3 .
+<https://ethereum.org/> <https://w3id.org/DLTOntology#hasComponent> _:genid4 .
+<https://ethereum.org/> <https://w3id.org/DLTOntology#hasComponent> _:genid5 .
+<https://ethereum.org/> <https://w3id.org/DLTOntology#isSpecializedFor> _:genid6 .
+<https://ethereum.org/> <https://w3id.org/DLTOntology#isUsedFor> _:genid7 .
+<https://www.corda.net/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTSystem> .
+<https://www.corda.net/> <http://www.w3.org/2000/01/rdf-schema#label> "R3 Corda" .
+<https://www.corda.net/> <http://purl.org/dc/terms/creator> "https://www.r3.com/" .
+<https://www.corda.net/> <http://purl.org/dc/terms/description> "R3's Corda is a scalable, permissioned peer-to-peer (P2P) distributed ledger technology (DLT) platform that enables the building of applications that foster and deliver digital trust between parties in regulated markets." .
+<https://www.corda.net/> <http://purl.org/dc/terms/created> "2014/4" .
+<https://www.corda.net/> <https://w3id.org/DLTOntology#hasComponent> _:genid5 .
+<https://www.corda.net/> <https://w3id.org/DLTOntology#hasComponent> _:genid1 .
+<https://www.corda.net/> <https://w3id.org/DLTOntology#hasComponent> _:genid8 .
+<https://www.corda.net/> <https://w3id.org/DLTOntology#hasComponent> _:genid9 .
+<https://www.corda.net/> <https://w3id.org/DLTOntology#hasComponent> _:genid10 .
+<https://www.corda.net/> <https://w3id.org/DLTOntology#isUsedFor> _:genid11 .
+<https://pact.care/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTSystem> .
+<https://pact.care/> <http://www.w3.org/2000/01/rdf-schema#label> "Pact" .
+<https://pact.care/> <http://purl.org/dc/terms/creator> "Hawig, David and \n                 Zhou, Chao and \n                 Fuhrhop, Sebastian and \n                 Fialho, Andre S and \n                 Ramachandran, Navin" .
+<https://pact.care/> <http://purl.org/dc/terms/description> "Pact Care was created with the mission to enable open, patient-centric and safe collaborations in healthcare. All our solutions align with the goal of breaking data silos, of increasing transparency and of enabling patients to be active participants in their care." .
+<https://pact.care/> <http://purl.org/dc/terms/created> "2019-06-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://pact.care/> <http://purl.org/dc/terms/source> "https://www.jmir.org/2019/6/e13665/" .
+<https://pact.care/> <https://w3id.org/DLTOntology#hasComponent> _:genid12 .
+<https://pact.care/> <https://w3id.org/DLTOntology#isSpecializedFor> _:genid13 .
+<https://pact.care/> <https://w3id.org/DLTOntology#isRegulatedBy> _:genid14 .
+<https://pact.care/> <https://w3id.org/DLTOntology#isCompliantTo> _:genid15 .
+<https://pact.care/> <https://w3id.org/DLTOntology#isUsedFor> _:genid16 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DataStructure> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTComponent> .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#label> "Blockchain" .
+_:genid1 <http://purl.org/dc/terms/creator> "David Chaum" .
+_:genid1 <http://purl.org/dc/terms/description> "A blockchain is a growing list of records, called blocks, that are linked together using cryptography." .
+_:genid1 <http://purl.org/dc/terms/created> "1983" .
+_:genid1 <https://w3id.org/DLTOntology#hasVulnerability> _:genid17 .
+_:genid1 <https://w3id.org/DLTOntology#hasVulnerability> _:genid18 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DataStructure> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTComponent> .
+_:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "Tangle Directed Acyclic Graph" .
+_:genid12 <http://purl.org/dc/terms/creator> "Serguei Popov" .
+_:genid12 <http://purl.org/dc/terms/description> "Tangle is the DAG consensus algorithm used by Iota. In order to send an Iota transaction, you need to validate two previous transactions you've received" .
+_:genid12 <http://purl.org/dc/terms/created> "2018-04-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid12 <http://purl.org/dc/terms/source> "https://assets.ctfassets.net/r1dr6vzfxhev/2t4uxvsIqk0EUau6g2sw0g/45eae33637ca92f85dd9f4a3a218e1ec/iota1_4_3.pdf" .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SmartContract> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTComponent> .
+_:genid2 <http://www.w3.org/2000/01/rdf-schema#label> "Ethereum Distributed Application" .
+_:genid2 <http://purl.org/dc/terms/description> "Smart contracts digitize agreements by turning the terms of an agreement into computer code that automatically executes when the contract terms are met." .
+_:genid2 <https://w3id.org/DLTOntology#hasVulnerability> _:genid19 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SmartContract> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTComponent> .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#label> "Decentralized Autonomous Organization" .
+_:genid3 <http://purl.org/dc/terms/description> "A DAO is an organization that is collectively owned and managed by its members. It's functionality is based on smart contracts." .
+_:genid3 <https://w3id.org/DLTOntology#hasVulnerability> _:genid20 .
+_:genid3 <https://w3id.org/DLTOntology#hasVulnerability> _:genid21 .
+_:genid3 <https://w3id.org/DLTOntology#hasVulnerability> _:genid22 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ConsensusAlgorithm> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTComponent> .
+_:genid4 <http://www.w3.org/2000/01/rdf-schema#label> "Proof-of-Work" .
+_:genid4 <http://purl.org/dc/terms/creator> "Cynthia Dwork and Moni Naor" .
+_:genid4 <http://purl.org/dc/terms/description> "Proof of work (PoW) is a form of cryptographic proof in which one party (the prover) proves to others (the verifiers) that a certain amount of a specific computational effort has been expended. " .
+_:genid4 <http://purl.org/dc/terms/created> "1993" .
+_:genid4 <https://w3id.org/DLTOntology#hasVulnerability> <https://w3id.org/DLTOntology#ConsensusVulnerability> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ConsensusAlgorithm> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTComponent> .
+_:genid9 <http://www.w3.org/2000/01/rdf-schema#label> "Corda Notary Consensus" .
+_:genid9 <http://purl.org/dc/terms/creator> "https://www.corda.net/" .
+_:genid9 <http://purl.org/dc/terms/description> "Consensus algorithms are a hot area of research and new algorithms are frequently developed that improve upon the state of the art. Unlike most distributed ledger systems Corda does not tightly integrate one specific approach. This is not only to support upgrades as new algorithms are developed, but also to reflect the fact that different tradeoffs may make sense for different situations and networks." .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#NetworkComponent> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTComponent> .
+_:genid5 <http://www.w3.org/2000/01/rdf-schema#label> "Peer-to-Peer Network" .
+_:genid5 <http://purl.org/dc/terms/creator> "Shawn Fanning and Sean Parker" .
+_:genid5 <http://purl.org/dc/terms/description> "Peer-to-peer (P2P) computing or networking is a distributed application architecture that partitions tasks or workloads between peers." .
+_:genid5 <http://purl.org/dc/terms/created> "1999/06/01" .
+_:genid5 <https://w3id.org/DLTOntology#hasVulnerability> <https://w3id.org/DLTOntology#NetworkVulnerability> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#PermissionControl> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTComponent> .
+_:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "Identity Control" .
+_:genid8 <http://purl.org/dc/terms/description> "In all decentralised ledger systems data access is controlled using asymmetric key pairs. Because public keys are difficult for humans to reliably remember or write down, a naming layer is added on top based on X.509 certificate hierarchies rooted at a single certificate authority for each network (see \u00A73.2)." .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Wallet> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DLTComponent> .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "The Vault" .
+_:genid10 <http://purl.org/dc/terms/creator> "https://www.corda.net/" .
+_:genid10 <http://purl.org/dc/terms/description> "The vault contains data extracted from the ledger that is considered relevant to the node\u2019s owner, stored in a form that can be easily queried and worked with. " .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DataStructureVulnerability> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Vulnerability> .
+_:genid17 <http://www.w3.org/2000/01/rdf-schema#label> "Blockchain Fork" .
+_:genid17 <http://purl.org/dc/terms/description> "A Blockchain fork constitutes a split of the main chain. The resulting forks all trace back to the so called Genesis Block, which indicates the last common block. " .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DataStructureVulnerability> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Vulnerability> .
+_:genid18 <http://www.w3.org/2000/01/rdf-schema#label> "Stale and Orphaned Blocks" .
+_:genid18 <http://purl.org/dc/terms/description> "Stale and Orphan Blocks are validated blocks that end up outside of the main blockchain." .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ConsensusVulnerability> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Vulnerability> .
+_:genid23 <http://www.w3.org/2000/01/rdf-schema#label> "Double-Spending Vulnerability" .
+_:genid23 <http://purl.org/dc/terms/description> "Double-spending is a potential flaw in a digital cash scheme in which the same single digital token can be spent more than once." .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ConsensusVulnerability> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Vulnerability> .
+_:genid24 <http://www.w3.org/2000/01/rdf-schema#label> "Reward for Uncle Blocks" .
+_:genid24 <http://purl.org/dc/terms/description> "Rewards for uncle blocks refers to a vulnerability of the reward mechanism of Ethereum that incited to selfish mining. Ethereum has an additional reward feature on top of regular block rewards, called uncle and nephew rewards" .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SmartContractVulnerability> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Vulnerability> .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#label> "Vulnerable Code" .
+_:genid20 <http://purl.org/dc/terms/description> "Weak or Vulnerable Code that lacks sufficient input validation, data sanitation, or has flaws in its code that can be exploited." .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SmartContractVulnerability> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Vulnerability> .
+_:genid22 <http://www.w3.org/2000/01/rdf-schema#label> "Recursive Calling Vulnerability" .
+_:genid22 <http://purl.org/dc/terms/description> "A nested function call that is meant to exploit a vulnerability in the code of a smart contract." .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#NetworkVulnerability> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Vulnerability> .
+_:genid25 <http://www.w3.org/2000/01/rdf-schema#label> "Block Withholding Vulnerability" .
+_:genid25 <http://purl.org/dc/terms/description> "Blocks can be withheld by malicious miners or mining pools to be released at a time of their convenience. This can cause disruptions and confusion to the network, destabilize it and possibly be the cause of a fork of the chain." .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ConsensusAttack> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid26 <http://www.w3.org/2000/01/rdf-schema#label> "Majority/51% Attack" .
+_:genid26 <http://purl.org/dc/terms/description> "The 51%-Attack, constitutes an attack on the consensus algorithm of a blockchain application. The adversary attempts to take over the network by controlling the majority of nodes, or more than 50% of the total computation power in the network." .
+_:genid26 <https://w3id.org/DLTOntology#canExploit> <https://w3id.org/DLTOntology#ConsensusVulnerability> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ConsensusAttack> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid21 <http://www.w3.org/2000/01/rdf-schema#label> "Race Attack" .
+_:genid21 <http://purl.org/dc/terms/description> "A malicious actor initiates two different transactions at the same time, referring to the same funds that are only sufficient for one transaction. Only one of these transactions can be validated. This enables the attacker to retrieve double the amount of goods for the same amount of money, if both receivers don't validate first." .
+_:genid21 <https://w3id.org/DLTOntology#canExploit> <https://w3id.org/DLTOntology#ConsensusVulnerability> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ConsensusAttack> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid27 <http://www.w3.org/2000/01/rdf-schema#label> "Finney Attack" .
+_:genid27 <http://purl.org/dc/terms/description> "During a Finney Attack, funds are used in a transaction, but the attacker is withholding a pre-prepared block with the same transaction to one of his own accounts. When the shop releases the goods, the attacker broadcasts his block which then invalidates the initial transaction by making the network believe that the actual transaction is the one that has been pre-prepared." .
+_:genid27 <https://w3id.org/DLTOntology#canExploit> <https://w3id.org/DLTOntology#ConsensusVulnerability> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ConsensusAttack> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid28 <http://www.w3.org/2000/01/rdf-schema#label> "Selfish Mining" .
+_:genid28 <http://purl.org/dc/terms/description> "Selfish mining is a deceitful cryptocurrency mining strategy in which one miner or a group solves a hash, opens a new block, and withholds it from the public blockchain. This action creates a fork, which is then mined to get ahead of the public blockchain." .
+_:genid28 <https://w3id.org/DLTOntology#canExploit> _:genid24 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DataStructureAttack> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid29 <http://www.w3.org/2000/01/rdf-schema#label> "Replay Attack" .
+_:genid29 <http://purl.org/dc/terms/description> "A replay attack is an exploit that can occur when two forked cryptocurrencies allow transactions to be valid across both chains." .
+_:genid29 <https://w3id.org/DLTOntology#canExploit> _:genid17 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SmartContractAttack> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid30 <http://www.w3.org/2000/01/rdf-schema#label> "Reentrancy Attack" .
+_:genid30 <http://purl.org/dc/terms/description> "Attacks could be conducted by specifically crafted contracts that call withdrawing functions, leading to the possibility of being able to withdraw more times than it should be possible to do so." .
+_:genid30 <https://w3id.org/DLTOntology#canExploit> _:genid20 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SmartContractAttack> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid31 <http://www.w3.org/2000/01/rdf-schema#label> "Forcible Balance Transfer" .
+_:genid31 <http://purl.org/dc/terms/description> "If there is badly written code or purposely created vulnerabilities that transfer balance without fallback functions, it can lead to failing transactions. The money spent in such a way is therefore lost." .
+_:genid31 <https://w3id.org/DLTOntology#canExploit> _:genid20 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SmartContractAttack> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid32 <http://www.w3.org/2000/01/rdf-schema#label> "The DAO Attack" .
+_:genid32 <http://purl.org/dc/terms/description> "The DAO Attack uses a combination of a race attack and recursive function calls to empty the funds of a DAO." .
+_:genid32 <https://w3id.org/DLTOntology#canExploit> _:genid22 .
+_:genid32 <https://w3id.org/DLTOntology#canExploit> _:genid20 .
+_:genid32 <https://w3id.org/DLTOntology#threatens> _:genid3 .
+_:genid32 <https://w3id.org/DLTOntology#threatens> _:genid33 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#NetworkAttack> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid34 <http://www.w3.org/2000/01/rdf-schema#label> "Eclipse Attack" .
+_:genid34 <http://purl.org/dc/terms/description> "An Eclipse attack focuses on the peer-to-peer component of blockchains. The goal is to isolate a victim from a legitimate network by making them connect only to nodes that are under the attacker's control until the maximum connection limit is reached. Afterwards it is much easier to start further attacks on the now shielded victim. " .
+_:genid34 <https://w3id.org/DLTOntology#canExploit> <https://w3id.org/DLTOntology#NetworkVulnerability> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#NetworkAttack> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid35 <http://www.w3.org/2000/01/rdf-schema#label> "Block Withholding Attack" .
+_:genid35 <http://purl.org/dc/terms/description> "A member of a mining pool can intentionally withhold a forged block from the rest of the pool and publish it as individual user, or a block can be withheld until a second legitimate block is generated for them to be released near simultaneously to confuse the network make further attacks possible." .
+_:genid35 <https://w3id.org/DLTOntology#canExploit> _:genid25 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#NetworkAttack> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Attack> .
+_:genid36 <http://www.w3.org/2000/01/rdf-schema#label> "Sybil Attack" .
+_:genid36 <http://purl.org/dc/terms/description> "A Sybil Attack is an identity-based Attack and threatens the peer-to-peer network. Communication amongst the peers in a blockchain network works so that a node gets his information from other surrounding nodes. An adversary can create many fake identities so that all connections from the victim will be established with the attacker." .
+_:genid36 <https://w3id.org/DLTOntology#canExploit> <https://w3id.org/DLTOntology#NetworkVulnerability> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DigitalCurrency> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Ether" .
+_:genid6 <http://purl.org/dc/terms/description> "Ether (ETH) is the cryptocurrency generated by the Ethereum protocol as a reward to miners in a proof-of-work system for adding blocks to the blockchain." .
+_:genid6 <https://w3id.org/DLTOntology#hasBusinessSector> _:genid11 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DigitalCurrency> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid37 <http://www.w3.org/2000/01/rdf-schema#label> "Tokenization and stable coins" .
+_:genid37 <http://purl.org/dc/terms/description> "The digitization of regulated financial products and services such as security/asset tokens and utility tokens and create new ones, e.g., cryptocurrency/payment tokens through tokenisation." .
+_:genid37 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Microfinance> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DigitalCurrency> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid39 <http://www.w3.org/2000/01/rdf-schema#label> "Funding" .
+_:genid39 <http://purl.org/dc/terms/description> "DLT creates new revenue opportunities such as new models of funding and new types of markets such as equity crowdfunding, secondary market or new types of exchanges." .
+_:genid39 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Microfinance> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DigitalCurrency> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid40 <http://www.w3.org/2000/01/rdf-schema#label> "Payments and P2P transactions" .
+_:genid40 <http://purl.org/dc/terms/description> "DLTs can bring new models and arrangements to make payments and transfers faster with lower costs and less or no intermediaries. E.g., remodelling correspondent banking, cross-border payments, etc." .
+_:genid40 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#FinancialServicesAndTrading> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid41 <http://www.w3.org/2000/01/rdf-schema#label> "Investments" .
+_:genid41 <http://purl.org/dc/terms/description> "Tokenised assets can support the transformation of the regular investments model and promote accessibility to new asset investments." .
+_:genid41 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#FinancialServicesAndTrading> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid42 <http://www.w3.org/2000/01/rdf-schema#label> "Financial management (accounting and auditing)" .
+_:genid42 <http://purl.org/dc/terms/description> "Smart contracts can automate some accounting processes. Auditing costs can be reduced through cheaper verification of transactions in DLT." .
+_:genid42 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DistributedComputing> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid43 <http://www.w3.org/2000/01/rdf-schema#label> "Reduction in hte risk of fraud" .
+_:genid43 <http://purl.org/dc/terms/description> "Real time data is decentralised and this can increase trust of the shared data, e.g., management of cash or financial controls, data of maritime industry for insurance purposes, etc." .
+_:genid43 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#AuditTrail> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#RecordKeeping> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid44 <http://www.w3.org/2000/01/rdf-schema#label> "Regulatory compliance and audit" .
+_:genid44 <http://purl.org/dc/terms/description> "DLTs can provide accurate and tamper-proof financial, audit and regulatory reports thereby improving speed and quality." .
+_:genid44 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Ownership> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#RecordKeeping> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#label> "Blockchain for Health Data Records" .
+_:genid13 <http://purl.org/dc/terms/description> "The blockchain is used for empowerment of the people, user centralized data generation, and for the consistency of health records" .
+_:genid13 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Ownership> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#RecordKeeping> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid45 <http://www.w3.org/2000/01/rdf-schema#label> "Diploma Verification" .
+_:genid45 <http://purl.org/dc/terms/description> "University of Geneva, Switzerland - A pilot application has been developed that uses a legally regulated seal and a timestamp on a public blockchain (Ethereum) to prove the authenticity of a diploma. The document is verified by using the original PDF/A-file or a short summary of the diploma. The use of a public blockchain ensures that the diploma can be proven even in the case of the university not being able to confirm its validity anymore." .
+_:genid45 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#AuditTrail> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#RecordKeeping> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid46 <http://www.w3.org/2000/01/rdf-schema#label> "Smart contracts for data accountability and provenance tracking" .
+_:genid46 <http://purl.org/dc/terms/description> "In light of the GDPR requirements, this use case propose the use of a blockchain-based approach to support data accountability and provenance tracking." .
+_:genid46 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DigitalIdentity> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#PrivacyAndIdentity> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid47 <http://www.w3.org/2000/01/rdf-schema#label> "ID verification (KYC/AML)" .
+_:genid47 <http://purl.org/dc/terms/description> "DLTs can provide a trusted way to do customer verification to satisfy KYC (Know your Customer) and AML (Anti-Money Laundering) obligations, e.g., through past immutable data in the DLT." .
+_:genid47 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#IdentityAndAccessControlSystems> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#PrivacyAndIdentity> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid48 <http://www.w3.org/2000/01/rdf-schema#label> "Improving governance authenticating identities, authorization signatures and digital content" .
+_:genid48 <http://purl.org/dc/terms/description> "OriginalMy Blockchain O\u00DC, Estonia - This approach is trustful because it improves the overall e-Governance reducing costs and saving time, is flexible to address an array of risk and compliance needs, performs traceability of all digital acts performed and has the security provided by blockchain cryptography protocols." .
+_:genid48 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DigitalIdentity> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#PrivacyAndIdentity> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid49 <http://www.w3.org/2000/01/rdf-schema#label> "National identity network" .
+_:genid49 <http://purl.org/dc/terms/description> "Alastria Association, Spain - Alastria is the first multisectoral Association promoted by organizations and institutions for the establishment of a public Blockchain/DLT infrastructure, supporting services with legal effectiveness in the Spanish scope and according with the European regulation." .
+_:genid49 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DigitalIdentity> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#PrivacyAndIdentity> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid50 <http://www.w3.org/2000/01/rdf-schema#label> "Digital identity as a service" .
+_:genid50 <http://purl.org/dc/terms/description> "This use case is a proposal to implement Digital identity with the use of DLT and use it as a service." .
+_:genid50 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DigitalIdentity> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#PrivacyAndIdentity> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid51 <http://www.w3.org/2000/01/rdf-schema#label> "Using human factors and a social graph to bootstrap ID" .
+_:genid51 <http://purl.org/dc/terms/description> "Self-sovereign ID using a social bootstrapping mechanism (using a plurality of attestations) allow humans to self-initialize identification. This aids in identification of displaced people/refugees. Once ID layer is initialized; allow additional attestations for education, professional certifications, or other relevant social data points." .
+_:genid51 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#LegalContracts> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ContractualUse> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid52 <http://www.w3.org/2000/01/rdf-schema#label> "Clearing and settlement" .
+_:genid52 <http://purl.org/dc/terms/description> "Automation and improvement of the centralized clearing and settlement processes using DLT can result in increased efficiency and reduction of costs, time and agents involved." .
+_:genid52 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#LegalContracts> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ContractualUse> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid53 <http://www.w3.org/2000/01/rdf-schema#label> "New insurance models" .
+_:genid53 <http://purl.org/dc/terms/description> "New peer-to-peer insurance models can be secured with DLT." .
+_:genid53 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessProcesses> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ContractualUse> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid54 <http://www.w3.org/2000/01/rdf-schema#label> "Global market place for mobile operators and service providers" .
+_:genid54 <http://purl.org/dc/terms/description> "The main goal is to enable mobile operators and service providers to interact directly and securely without any agreements, intermediators and complex integration via smart contracts." .
+_:genid54 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessProcesses> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ContractualUse> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid55 <http://www.w3.org/2000/01/rdf-schema#label> "Automatic discovery, quote, ordering and settlement in a mesh of interconnected ICT service providers" .
+_:genid55 <http://purl.org/dc/terms/description> "Automatic Discovery, Quote, Ordering and Settlement in a Mesh of Interconnected ICT Service Providers resulting in a significant decrease in time compared to legacy manual processes." .
+_:genid55 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessProcesses> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ContractualUse> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid56 <http://www.w3.org/2000/01/rdf-schema#label> "Wholesale voice settlement" .
+_:genid56 <http://purl.org/dc/terms/description> "Settlement generally relies on third party clearing houses, to whom carriers must disclose sensitive commercial data and who charge a fee." .
+_:genid56 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessProcesses> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ContractualUse> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid57 <http://www.w3.org/2000/01/rdf-schema#label> "Distributed ledger based online trading system for cross-domain VPN provision" .
+_:genid57 <http://purl.org/dc/terms/description> "DLT is used for on-demand VPN connection setup across different domains." .
+_:genid57 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessProcesses> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#ContractualUse> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid58 <http://www.w3.org/2000/01/rdf-schema#label> "DLT for number assignment, services and number portability" .
+_:genid58 <http://purl.org/dc/terms/description> "Solution for global number and service portability that provides fast cost effective and scalable technology for global services deployment." .
+_:genid58 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#IndicationOfSource> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SupplyChain> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid59 <http://www.w3.org/2000/01/rdf-schema#label> "Supply chain finance in pharmaceutical industry with DLT" .
+_:genid59 <http://purl.org/dc/terms/description> "This use case is a proposal to trace the logistics of medicines and provide lower-cost financial support for the trader on pharmaceutical industry chain. In traditional pharmaceutical supply chain, we see the issues like fake medicines, fragmented medical logistics, untransparency of trading processes and restriction of credit grantees for SMEs." .
+_:genid59 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Tracking> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SupplyChain> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid60 <http://www.w3.org/2000/01/rdf-schema#label> "Blockchain web/mobile application for vaccine supply chain" .
+_:genid60 <http://purl.org/dc/terms/description> "Developing countries face challenges in the vaccine supply chain. The Challenges threaten vaccine access, availability, and quality. As countries adopt newer and more expensive vaccines and attempt to reach people at different ages and in new settings, the supply chain must be optimized. Information about demand, stock-levels and timely use of vaccines is poorly kept affecting timely supply leading to expirees and/or lack of needed vaccines." .
+_:genid60 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Tracking> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SupplyChain> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid61 <http://www.w3.org/2000/01/rdf-schema#label> "Drugs Distributed Ledger" .
+_:genid61 <http://purl.org/dc/terms/description> "The implementation of DLT solution, which allows tracking medical treatments and provides the necessary reports can reduce paperwork and increase common efficiency." .
+_:genid61 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#IndicationOfSource> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SupplyChain> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid62 <http://www.w3.org/2000/01/rdf-schema#label> "Reverse logistics credits" .
+_:genid62 <http://purl.org/dc/terms/description> "Post-consumption waste Reverse logistics compensation scheme using DLT as infrastructure to issue Reverse Logistics Credits, which can be used by companies wishing to offset and incentivise the recycling of the waste generated by the consumption of the products they sell to the public." .
+_:genid62 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Tracking> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SupplyChain> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid63 <http://www.w3.org/2000/01/rdf-schema#label> "Responsible gold ecosystem" .
+_:genid63 <http://purl.org/dc/terms/description> "The Ecosystem helps enhance integrity in the global gold supply chain by using DLT to irrefutably and immutably record ethical provenance and chain of custody from mine, to refinery, to vault or fabricator." .
+_:genid63 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Tracking> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SupplyChain> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid64 <http://www.w3.org/2000/01/rdf-schema#label> "Traceability in the food supply chain in Brazil" .
+_:genid64 <http://purl.org/dc/terms/description> "The integration of DLT to Safe Trace's system provides transparency, reliability and immutability of data to all relevant stakeholder in the beef supply chain." .
+_:genid64 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Tracking> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SupplyChain> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid65 <http://www.w3.org/2000/01/rdf-schema#label> "Trade facilitation and customs management" .
+_:genid65 <http://purl.org/dc/terms/description> "DLT helps to ensure the integrity of data and to maintain trust among the parties involved in the international shipment of containers goods." .
+_:genid65 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Tracking> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SupplyChain> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid66 <http://www.w3.org/2000/01/rdf-schema#label> "Multimodal logistic corridor" .
+_:genid66 <http://purl.org/dc/terms/description> "A logistic corridor designed within the most modern and rigorous criteria of infrastructure, technology and sustainability that promotes innovation and contribution to the progress of a new industrial age." .
+_:genid66 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Donations> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#HumanRightsAndContributions> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid67 <http://www.w3.org/2000/01/rdf-schema#label> "Blockchain for bone marrow, blood and organ donation" .
+_:genid67 <http://purl.org/dc/terms/description> "LifeBlocs is a start-up that aims to increase blood, bone marrow, and organ donations, and optimize the matching process between donors and receivers." .
+_:genid67 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Donations> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#HumanRightsAndContributions> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid68 <http://www.w3.org/2000/01/rdf-schema#label> "Accountability and transparency in fundraising" .
+_:genid68 <http://purl.org/dc/terms/description> "The payments process from BNDES to its Clients was the choice to be recorded on Trubudget blockchain in the Pilot Phase." .
+_:genid68 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#NGO> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#HumanRightsAndContributions> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid69 <http://www.w3.org/2000/01/rdf-schema#label> "Carbon removal marketplace" .
+_:genid69 <http://purl.org/dc/terms/description> "A simple and scalable system that allows even small carbon removers to monetize their activity could see the emergence of a trillion dollar carbon removal industry." .
+_:genid69 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Cybersecurity> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid70 <http://www.w3.org/2000/01/rdf-schema#label> "Distributed Ledger based online trading system for DDoS mitigation services" .
+_:genid70 <http://purl.org/dc/terms/description> "By using DLT, it's much easier to mitigate attack at the point of attack sources, and prevents the attack traffic from consuming bandwidth resources of the intermediate networks." .
+_:genid70 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Cybersecurity> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid71 <http://www.w3.org/2000/01/rdf-schema#label> "DLT based decentralized public key infrastructure" .
+_:genid71 <http://purl.org/dc/terms/description> "By using DLT, a decentralized PKI system can be built without highly centralized root CA, and avoid the single point of failure problem." .
+_:genid71 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SmartMeter> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#PowerManagement> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid72 <http://www.w3.org/2000/01/rdf-schema#label> "Energy distribution with the use of smart contracts" .
+_:genid72 <http://purl.org/dc/terms/description> "Energy produced by a prosumer may be saved in the user's local battery for later use or may be immediately injected in the local grid." .
+_:genid72 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#SmartMeter> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#PowerManagement> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid73 <http://www.w3.org/2000/01/rdf-schema#label> "P2P energy trading" .
+_:genid73 <http://purl.org/dc/terms/description> "Allowing Prosumers to trade the energy from their Distributed Energy Resources (DERs) like solar panels, batteries and electrical vehicles in a peer-to-peer transactive network (P2P TE)." .
+_:genid73 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#IoTEcosystem> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#IoT> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid74 <http://www.w3.org/2000/01/rdf-schema#label> "Pig farm monitoring & data traceability" .
+_:genid74 <http://purl.org/dc/terms/description> "The system can automatically record the environmental, physiological and feeding data and enables efficient and trusted data storage and sharing among stakeholders." .
+_:genid74 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#EVoting> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#GovernmentalServices> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid75 <http://www.w3.org/2000/01/rdf-schema#label> "Lawmaking" .
+_:genid75 <http://purl.org/dc/terms/description> "In this way, members of the public can draft and sign petitions in a way that is verifiable and secure." .
+_:genid75 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#GovernmentalServices> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid76 <http://www.w3.org/2000/01/rdf-schema#label> "Real time tax compliance" .
+_:genid76 <http://purl.org/dc/terms/description> "This technology supports individuals, corporations, and governments in building powerful but simple solutions to complex problems. OpenLaw supports, but is not limited to, use cases such as automatic tax collection and alternative dispute resolution that help communities by making sure public services can be paid for and access to justice." .
+_:genid76 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid77 <http://www.w3.org/2000/01/rdf-schema#label> "DLT as objects of art, design and culture domains" .
+_:genid77 <http://purl.org/dc/terms/description> "In the art, design and culture domain, DLTs serve as an emerging medium and material for artistic creation and production (crypto-native-artifacts, materialized coins, design experiments and performances with smart contracts, mining rigs as hardware sculptures and objects) probing the promises, fears and expectations about the future infrastructure and medium of exchange." .
+_:genid77 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid78 <http://www.w3.org/2000/01/rdf-schema#label> "Crypto-native-artifacts as art assets, installations and performances" .
+_:genid78 <http://purl.org/dc/terms/description> "Artists are exploring various ways of materializing tokens, hashes and smart contracts by embedding them with unique characteristics. Examples include coins/tokens stamped with the blood of the artist or hashes of coins sold as light art installation objects (Kevin Abosch), mining algorithms and rings materialized as artistic hardware or sculptures and embedded in traditional art objects (Bittercoin, Bitcoin of Things, painting frames \u201CUntitled Mining Installation\u201D)." .
+_:genid78 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid79 <http://www.w3.org/2000/01/rdf-schema#label> "Crypto-collectibles, puzzles, rare objects and cryptoart" .
+_:genid79 <http://purl.org/dc/terms/description> "DLTs support so-called rare digital artworks (''rares'') or trading cards with unique non-fungible tokens (NFTs) supporting the idea of digital scarcity (CryptoKitties, CryptoPunks, Dada.nyc, SuperRare, Tarasca). DLTs can also facilitate a form of murals as puzzles that reveal a code for some cryptocurrency prize (Pascal Boyart)." .
+_:genid79 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid80 <http://www.w3.org/2000/01/rdf-schema#label> "Supporting co-op models for artistic creation" .
+_:genid80 <http://purl.org/dc/terms/description> "Artists and activists explore the potential of DLTs to enable co-ownership, artistic cryptocurrency and co-ops in various domains (music, art, tangible and intangible objects)." .
+_:genid80 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid81 <http://www.w3.org/2000/01/rdf-schema#label> "Decentralization and fragmentation of ownership and new art markets" .
+_:genid81 <http://purl.org/dc/terms/description> "DLTs allow art objects to be digitally fragmented and offered as shares in artworks which support new forms of art auctioning but also co-ownership of artworks and collections." .
+_:genid81 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid82 <http://www.w3.org/2000/01/rdf-schema#label> "Contracting and payments to performers, production staff, and others" .
+_:genid82 <http://purl.org/dc/terms/description> "Many workers in the arts and entertainment industries operate on a freelance or per-gig basis. DLTs can streamline contracting, payment and employment records with any number of DLT-based notarization tools." .
+_:genid82 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#MusicIndustry> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid83 <http://www.w3.org/2000/01/rdf-schema#label> "Credential wallet for professional qualifications, experience and other data" .
+_:genid83 <http://purl.org/dc/terms/description> "Professional qualifications and records of experience (Myceliaformusic.com, Musicwontstop.com) allow for performers and creatives to track their collaborations and create a record or passport of their career and achievements. Collating professional achievements in this way facilitates reputation management, charting networks, collaborations and guest performances in the real-world ecosystem of professional arts practice." .
+_:genid83 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#MusicIndustry> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid84 <http://www.w3.org/2000/01/rdf-schema#label> "Traceability, attribution and royalties" .
+_:genid84 <http://purl.org/dc/terms/description> "Where digital artifacts of performances are available, ownership and royalties due can be asserted via DLT (Soundac). It is worth noting that existing systems are poor at tracking and collecting royalty payments on the part of creators." .
+_:genid84 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Streaming> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid85 <http://www.w3.org/2000/01/rdf-schema#label> "Performance on digital decentralized platforms" .
+_:genid85 <http://purl.org/dc/terms/description> "Given the context of IP theft and the fair concern with copyright and income protection on the part of creatives, there is a growth in DLT-based online performance outlets. A number of new streaming platforms facilitate alternative performance opportunities with direct payment to creators." .
+_:genid85 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Gaming> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid86 <http://www.w3.org/2000/01/rdf-schema#label> "Hosting decentralized tournaments for non-elite players" .
+_:genid86 <http://purl.org/dc/terms/description> "Previously, only a handful of elite players could compete for the prize pools associated with tournaments, pushing smaller players out of the game. Now, DLT based tournaments allow players to run their own small peer-to-peer tournaments." .
+_:genid86 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Gaming> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid87 <http://www.w3.org/2000/01/rdf-schema#label> "Reputation Management" .
+_:genid87 <http://purl.org/dc/terms/description> "eSports can also include reputation management mechanisms. DLT provides decentralized and scalable computing resources to augment developers' infrastructure and provide mechanisms to mitigate cheating, downtime, and costly maintenance that would be a result of using traditional means." .
+_:genid87 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Gaming> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid88 <http://www.w3.org/2000/01/rdf-schema#label> "Community involvement and rewards" .
+_:genid88 <http://purl.org/dc/terms/description> "Contributors of high quality content are generally rewarded with tokens, which may then be used to access other services within the platform. In DLT systems, token holders will also be able to liquidate their tokens to fiat currencies or use cross-gaming tokens within the ecosystem to access other games." .
+_:genid88 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Gambling> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid89 <http://www.w3.org/2000/01/rdf-schema#label> "Facilitate betting and increasing security" .
+_:genid89 <http://purl.org/dc/terms/description> "Betting is an extremely popular byproduct of eSports tournaments and accounts for a good deal of income in the space. For example, the NFL brought in US$13 bn in 2017 while NFL fantasy leagues and betting brought in more than US$50 bn." .
+_:genid89 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Gaming> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Entertainment> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#UseCase> .
+_:genid90 <http://www.w3.org/2000/01/rdf-schema#label> "Reduce forgery" .
+_:genid90 <http://purl.org/dc/terms/description> "The sale of gamer-earned goods is a huge source of contention in the gaming industry, with payment often being forged and people sometimes being conned out of their hard-earned reward. Use of DLT can certainly be employed here to increase trust and reliability when it comes to making money out of the time and effort spent playing a game." .
+_:genid90 <http://purl.org/dc/terms/source> _:genid38 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessSector> .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "Finance" .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid6 .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid37 .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid39 .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid40 .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid41 .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid42 .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid43 .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid47 .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid52 .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid53 .
+_:genid11 <https://w3id.org/DLTOntology#hasUseCase> _:genid44 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessSector> .
+_:genid16 <http://www.w3.org/2000/01/rdf-schema#label> "Healthcare" .
+_:genid16 <https://w3id.org/DLTOntology#hasUseCase> _:genid61 .
+_:genid16 <https://w3id.org/DLTOntology#hasUseCase> _:genid67 .
+_:genid16 <https://w3id.org/DLTOntology#hasUseCase> _:genid13 .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessSector> .
+_:genid91 <http://www.w3.org/2000/01/rdf-schema#label> "Pharma Industry" .
+_:genid91 <https://w3id.org/DLTOntology#hasUseCase> _:genid59 .
+_:genid91 <https://w3id.org/DLTOntology#hasUseCase> _:genid60 .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessSector> .
+_:genid92 <http://www.w3.org/2000/01/rdf-schema#label> "Information and Communication Technology" .
+_:genid92 <https://w3id.org/DLTOntology#hasUseCase> _:genid54 .
+_:genid92 <https://w3id.org/DLTOntology#hasUseCase> _:genid55 .
+_:genid92 <https://w3id.org/DLTOntology#hasUseCase> _:genid56 .
+_:genid92 <https://w3id.org/DLTOntology#hasUseCase> _:genid57 .
+_:genid92 <https://w3id.org/DLTOntology#hasUseCase> _:genid70 .
+_:genid92 <https://w3id.org/DLTOntology#hasUseCase> _:genid58 .
+_:genid92 <https://w3id.org/DLTOntology#hasUseCase> _:genid50 .
+_:genid92 <https://w3id.org/DLTOntology#hasUseCase> _:genid51 .
+_:genid92 <https://w3id.org/DLTOntology#hasUseCase> _:genid71 .
+_:genid92 <https://w3id.org/DLTOntology#hasUseCase> _:genid46 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessSector> .
+_:genid93 <http://www.w3.org/2000/01/rdf-schema#label> "Energy Sector" .
+_:genid93 <https://w3id.org/DLTOntology#hasUseCase> _:genid72 .
+_:genid93 <https://w3id.org/DLTOntology#hasUseCase> _:genid73 .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessSector> .
+_:genid94 <http://www.w3.org/2000/01/rdf-schema#label> "Climate Industry" .
+_:genid94 <https://w3id.org/DLTOntology#hasUseCase> _:genid62 .
+_:genid94 <https://w3id.org/DLTOntology#hasUseCase> _:genid69 .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessSector> .
+_:genid95 <http://www.w3.org/2000/01/rdf-schema#label> "Supply Chain Management" .
+_:genid95 <https://w3id.org/DLTOntology#hasUseCase> _:genid74 .
+_:genid95 <https://w3id.org/DLTOntology#hasUseCase> _:genid63 .
+_:genid95 <https://w3id.org/DLTOntology#hasUseCase> _:genid64 .
+_:genid95 <https://w3id.org/DLTOntology#hasUseCase> _:genid65 .
+_:genid95 <https://w3id.org/DLTOntology#hasUseCase> _:genid66 .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessSector> .
+_:genid96 <http://www.w3.org/2000/01/rdf-schema#label> "Government and Public Sector" .
+_:genid96 <https://w3id.org/DLTOntology#hasUseCase> _:genid37 .
+_:genid96 <https://w3id.org/DLTOntology#hasUseCase> _:genid68 .
+_:genid96 <https://w3id.org/DLTOntology#hasUseCase> _:genid75 .
+_:genid96 <https://w3id.org/DLTOntology#hasUseCase> _:genid76 .
+_:genid96 <https://w3id.org/DLTOntology#hasUseCase> _:genid48 .
+_:genid96 <https://w3id.org/DLTOntology#hasUseCase> _:genid45 .
+_:genid96 <https://w3id.org/DLTOntology#hasUseCase> _:genid49 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#BusinessSector> .
+_:genid7 <http://www.w3.org/2000/01/rdf-schema#label> "Entertainment: Arts, Culture and e-Sports" .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid77 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid78 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid79 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid80 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid81 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid82 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid83 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid84 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid85 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid86 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid87 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid88 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid89 .
+_:genid7 <https://w3id.org/DLTOntology#hasUseCase> _:genid90 .
+<https://doi.org/10.6028/NIST.IR.8202> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+<https://doi.org/10.6028/NIST.IR.8202> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+<https://doi.org/10.6028/NIST.IR.8202> <http://purl.org/dc/terms/identifier> "https://doi.org/10.6028/NIST.IR.8202" .
+<https://doi.org/10.6028/NIST.IR.8202> <http://www.w3.org/2000/01/rdf-schema#label> "NISTIR 8202 - Blockchain Technology Overview" .
+<https://doi.org/10.6028/NIST.IR.8202> <http://purl.org/dc/terms/created> "2018-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://doi.org/10.6028/NIST.IR.8202> <http://purl.org/dc/terms/creator> "Dylan Yaga" .
+<https://doi.org/10.6028/NIST.IR.8202> <http://purl.org/dc/terms/creator> "Peter Mell" .
+<https://doi.org/10.6028/NIST.IR.8202> <http://purl.org/dc/terms/creator> "Nik Roby" .
+<https://doi.org/10.6028/NIST.IR.8202> <http://purl.org/dc/terms/creator> "Karen Scarfone" .
+<https://doi.org/10.6028/NIST.IR.8202> <http://purl.org/dc/terms/abstract> "Blockchains are tamper evident and tamper resistant digital ledgers implemented in a distributed fashion (i.e., without a central repository) and usually without a central authority (i.e., a bank, company, or government). At their basic level, they enable a community of users to record transactions in a shared ledger within that community, such that under normal operation of the blockchain network no transaction can be changed once published. This document provides a high-level technical overview of blockchain technology. The purpose is to help readers understand how blockchain technology works." .
+<https://www.nist.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#StandardizationOrganization> .
+<https://www.nist.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#NationalStandardizationOrganization> .
+<https://www.nist.gov/> <http://www.w3.org/2000/01/rdf-schema#label> "National Institute of Standards and Technology" .
+<https://www.nist.gov/> <http://purl.org/dc/terms/coverage> <http://www.wikidata.org/entity/Q30> .
+<https://www.nist.gov/> <https://w3id.org/DLTOntology#createsStandard> <https://doi.org/10.6028/NIST.IR.8202> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid97 <http://www.w3.org/2000/01/rdf-schema#label> "ASC X9 Study Group Report" .
+_:genid97 <http://purl.org/dc/terms/created> "2018-04-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid97 <http://purl.org/dc/terms/creator> "Distributed Ledger and Blockchain Technology Study Group" .
+_:genid97 <http://purl.org/dc/terms/source> "https://x9.org/wp-content/uploads/2018/04/Distributed-Ledger-and-Blockchain-Technology-Study-Group-Report-FINAL.pdf" .
+<https://x9.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#StandardizationOrganization> .
+<https://x9.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#NationalStandardizationOrganization> .
+<https://x9.org/> <http://www.w3.org/2000/01/rdf-schema#label> "Accredited Standards Committee X9" .
+<https://x9.org/> <http://purl.org/dc/terms/coverage> <http://www.wikidata.org/entity/Q30> .
+<https://x9.org/> <https://w3id.org/DLTOntology#createsStandard> _:genid97 .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid98 <http://purl.org/dc/terms/identifier> "ISO/TR 23455:2019" .
+_:genid98 <http://www.w3.org/2000/01/rdf-schema#label> "ISO/TR 23455:2019 Blockchain and distributed ledger technologies - Overview of and interactions between smart contracts in blockchain and distributed ledger technology systems" .
+_:genid98 <http://purl.org/dc/terms/created> "2019-09-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid98 <http://purl.org/dc/terms/creator> "ISO/TC 307 Blockchain and distributed ledger technologies" .
+_:genid98 <http://purl.org/dc/terms/abstract> "This document provides an overview of smart contracts in BC/DLT systems; describing what smart contracts are and how they work. It also discusses methods of interaction between multiple smart contracts. This document focuses on technical aspects of smart contracts. Smart contracts for legally binding use and applications will only be briefly mentioned in this document." .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standrad> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid15 <http://purl.org/dc/terms/identifier> "ISO 22857:2013" .
+_:genid15 <http://www.w3.org/2000/01/rdf-schema#label> "Health informatics - Guidelines on data protection to facilitate trans-border flows of personal health data" .
+_:genid15 <http://purl.org/dc/terms/created> "2013-12-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid15 <http://purl.org/dc/terms/creator> "ISO/TC 215 Health Informatics" .
+<https://www.iso.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#StandardizationOrganization> .
+<https://www.iso.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InternationalStandardizationOrganization> .
+<https://www.iso.org/> <http://www.w3.org/2000/01/rdf-schema#label> "International Organization for Standardization" .
+<https://www.iso.org/> <https://w3id.org/DLTOntology#createsStandard> _:genid98 .
+<https://dx.doi.org/10.31030/2791664> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+<https://dx.doi.org/10.31030/2791664> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+<https://dx.doi.org/10.31030/2791664> <http://purl.org/dc/terms/identifier> "DIN SPEC 16597" .
+<https://dx.doi.org/10.31030/2791664> <http://www.w3.org/2000/01/rdf-schema#label> "DIN SPEC 16597 Terminology for blockchains" .
+<https://dx.doi.org/10.31030/2791664> <http://purl.org/dc/terms/created> "2018-02-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://dx.doi.org/10.31030/3055288> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+<https://dx.doi.org/10.31030/3055288> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+<https://dx.doi.org/10.31030/3055288> <http://purl.org/dc/terms/identifier> "DIN SPEC 3103" .
+<https://dx.doi.org/10.31030/3055288> <http://www.w3.org/2000/01/rdf-schema#label> "DIN SPEC 3103:2019-06 Blockchain and distributed ledger technologies in application scenarios for Industrie 4.0" .
+<https://dx.doi.org/10.31030/3055288> <http://purl.org/dc/terms/created> "2019-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://dx.doi.org/10.31030/3055288> <http://purl.org/dc/terms/references> <https://dx.doi.org/10.31030/2791664> .
+<https://dx.doi.org/10.31030/3042007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+<https://dx.doi.org/10.31030/3042007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+<https://dx.doi.org/10.31030/3042007> <http://purl.org/dc/terms/identifier> "DIN SPEC 3104" .
+<https://dx.doi.org/10.31030/3042007> <http://www.w3.org/2000/01/rdf-schema#label> "DIN SPEC 3104:2019-04 Blockchain-based validation of data" .
+<https://dx.doi.org/10.31030/3042007> <http://purl.org/dc/terms/created> "2019-04-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://dx.doi.org/10.31030/3042007> <http://purl.org/dc/terms/references> <https://dx.doi.org/10.31030/2791664> .
+<https://dx.doi.org/10.31030/3150128> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+<https://dx.doi.org/10.31030/3150128> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+<https://dx.doi.org/10.31030/3150128> <http://purl.org/dc/terms/identifier> "DIN SPEC 4996" .
+<https://dx.doi.org/10.31030/3150128> <http://www.w3.org/2000/01/rdf-schema#label> "DIN SPEC 4996:2020-04 Blockchain-based approach to the transfer of software licenses" .
+<https://dx.doi.org/10.31030/3150128> <http://purl.org/dc/terms/created> "2020-04-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://dx.doi.org/10.31030/3150128> <http://purl.org/dc/terms/references> <https://dx.doi.org/10.31030/2791664> .
+<https://dx.doi.org/10.31030/3150128> <http://purl.org/dc/terms/references> <https://doi.org/10.6028/NIST.IR.8202> .
+<https://dx.doi.org/10.31030/3150127> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+<https://dx.doi.org/10.31030/3150127> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+<https://dx.doi.org/10.31030/3150127> <http://purl.org/dc/terms/identifier> "DIN SPEC 4997" .
+<https://dx.doi.org/10.31030/3150127> <http://www.w3.org/2000/01/rdf-schema#label> "DIN SPEC 4997:2020-04 Privacy by Blockchain Design: A standardised model for processing personal data using blockchain technology" .
+<https://dx.doi.org/10.31030/3150127> <http://purl.org/dc/terms/created> "2019-04-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://dx.doi.org/10.31030/3150127> <http://purl.org/dc/terms/references> _:genid99 .
+<https://dx.doi.org/10.31030/3150127> <http://purl.org/dc/terms/references> <https://dx.doi.org/10.31030/3042007> .
+<https://www.din.de/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#StandardizationOrganization> .
+<https://www.din.de/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#NationalStandardizationOrganization> .
+<https://www.din.de/> <http://www.w3.org/2000/01/rdf-schema#label> "German Institute for Standardization" .
+<https://www.din.de/> <http://purl.org/dc/terms/coverage> <http://www.wikidata.org/entity/Q183> .
+<https://www.din.de/> <https://w3id.org/DLTOntology#createsStandard> <https://dx.doi.org/10.31030/2791664> .
+<https://www.din.de/> <https://w3id.org/DLTOntology#createsStandard> <https://dx.doi.org/10.31030/3055288> .
+<https://www.din.de/> <https://w3id.org/DLTOntology#createsStandard> <https://dx.doi.org/10.31030/3042007> .
+<https://www.din.de/> <https://w3id.org/DLTOntology#createsStandard> <https://dx.doi.org/10.31030/3150128> .
+<https://www.din.de/> <https://w3id.org/DLTOntology#createsStandard> <https://dx.doi.org/10.31030/3150127> .
+<https://www.enisa.europa.eu/publications/blockchain-security> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+<https://www.enisa.europa.eu/publications/blockchain-security> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+<https://www.enisa.europa.eu/publications/blockchain-security> <http://www.w3.org/2000/01/rdf-schema#label> "Distributed Ledger Technology & Cybersecurity - Improving information security in the financial sector" .
+<https://www.enisa.europa.eu/publications/blockchain-security> <http://purl.org/dc/terms/created> "2017-01-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://www.enisa.europa.eu/publications/blockchain-security> <http://purl.org/dc/terms/abstract> "This paper aims to provide financial professionals in both business and technology roles with an assessment of the various benefits and challenges that their institutions may encounter when implementing a distributed ledger." .
+<https://www.enisa.europa.eu/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#StandardizationOrganization> .
+<https://www.enisa.europa.eu/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InternationalStandardizationOrganization> .
+<https://www.enisa.europa.eu/> <http://www.w3.org/2000/01/rdf-schema#label> "The European Union Agency for Cybersecurity" .
+<https://www.enisa.europa.eu/> <http://purl.org/dc/terms/coverage> <http://www.wikidata.org/entity/Q458> .
+<https://www.enisa.europa.eu/> <https://w3id.org/DLTOntology#createsStandard> <https://www.enisa.europa.eu/publications/blockchain-security> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid100 <http://www.w3.org/2000/01/rdf-schema#label> "Towards Secure Blockchains - Concepts, Requirements, Assessments" .
+_:genid100 <http://purl.org/dc/terms/created> "2019-12-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid100 <http://purl.org/dc/terms/abstract> "In this document, the BSI studies blockchains primarily from the point of view of IT security, but also considers further implications of the basic technical design, e.g. on efficiency or compliance with requirements from data protection. In general, blockchains offer benefits as compared to databases in terms of availability and resilience against misuse, whereas they show disadvantages in terms of confidentiality and efficiency." .
+<https://www.bsi.bund.de/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#StandardizationOrganization> .
+<https://www.bsi.bund.de/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#NationalStandardizationOrganization> .
+<https://www.bsi.bund.de/> <http://www.w3.org/2000/01/rdf-schema#label> "German Federal Office for Information Security" .
+<https://www.bsi.bund.de/> <http://purl.org/dc/terms/coverage> <http://www.wikidata.org/entity/Q183> .
+<https://www.bsi.bund.de/> <https://w3id.org/DLTOntology#createsStandard> _:genid100 .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid99 <http://purl.org/dc/terms/identifier> "FG DLT D1.1" .
+_:genid99 <http://www.w3.org/2000/01/rdf-schema#label> "DLT terms and definitions" .
+_:genid99 <http://purl.org/dc/terms/created> "2019-08-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid99 <http://purl.org/dc/terms/references> _:genid38 .
+_:genid99 <http://purl.org/dc/terms/references> <https://doi.org/10.6028/NIST.IR.8202> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid101 <http://purl.org/dc/terms/identifier> "FG DLT D1.2" .
+_:genid101 <http://www.w3.org/2000/01/rdf-schema#label> "DLT overview, concepts, ecosystem" .
+_:genid101 <http://purl.org/dc/terms/created> "2019-08-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid101 <http://purl.org/dc/terms/references> _:genid99 .
+_:genid101 <http://purl.org/dc/terms/references> <https://doi.org/10.6028/NIST.IR.8202> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid38 <http://purl.org/dc/terms/identifier> "FG DLT D2.1" .
+_:genid38 <http://www.w3.org/2000/01/rdf-schema#label> "DLT use cases" .
+_:genid38 <http://purl.org/dc/terms/created> "2019-08-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid38 <http://purl.org/dc/terms/references> _:genid99 .
+_:genid38 <http://purl.org/dc/terms/references> _:genid102 .
+_:genid38 <http://purl.org/dc/terms/references> _:genid103 .
+_:genid38 <http://purl.org/dc/terms/references> _:genid104 .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid102 <http://purl.org/dc/terms/identifier> "FG DLT D3.1" .
+_:genid102 <http://www.w3.org/2000/01/rdf-schema#label> "DLT reference architecture" .
+_:genid102 <http://purl.org/dc/terms/created> "2019-08-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid102 <http://purl.org/dc/terms/references> _:genid99 .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid103 <http://purl.org/dc/terms/identifier> "FG DLT D3.3" .
+_:genid103 <http://www.w3.org/2000/01/rdf-schema#label> "Assessment criteria for DLT platforms" .
+_:genid103 <http://purl.org/dc/terms/created> "2019-08-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid103 <http://purl.org/dc/terms/references> _:genid99 .
+_:genid103 <http://purl.org/dc/terms/references> _:genid102 .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid104 <http://purl.org/dc/terms/identifier> "FG DLT D4.1" .
+_:genid104 <http://www.w3.org/2000/01/rdf-schema#label> "DLT regulatory framework" .
+_:genid104 <http://purl.org/dc/terms/created> "2019-08-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid104 <http://purl.org/dc/terms/references> _:genid99 .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid105 <http://purl.org/dc/terms/identifier> "FG DLT D5.1" .
+_:genid105 <http://www.w3.org/2000/01/rdf-schema#label> "Outlook on DLTs" .
+_:genid105 <http://purl.org/dc/terms/created> "2019-08-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid105 <http://purl.org/dc/terms/references> _:genid99 .
+_:genid105 <http://purl.org/dc/terms/references> _:genid106 .
+_:genid105 <http://purl.org/dc/terms/references> _:genid38 .
+_:genid105 <http://purl.org/dc/terms/references> _:genid103 .
+_:genid105 <http://purl.org/dc/terms/references> _:genid104 .
+<https://www.itu.int/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#StandardizationOrganization> .
+<https://www.itu.int/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InternationalStandardizationOrganization> .
+<https://www.itu.int/> <http://www.w3.org/2000/01/rdf-schema#label> "International Telecommunication Union" .
+<https://www.itu.int/> <https://w3id.org/DLTOntology#createsStandard> _:genid99 .
+<https://www.itu.int/> <https://w3id.org/DLTOntology#createsStandard> _:genid101 .
+<https://www.itu.int/> <https://w3id.org/DLTOntology#createsStandard> _:genid38 .
+<https://www.itu.int/> <https://w3id.org/DLTOntology#createsStandard> _:genid102 .
+<https://www.itu.int/> <https://w3id.org/DLTOntology#createsStandard> _:genid103 .
+<https://www.itu.int/> <https://w3id.org/DLTOntology#createsStandard> _:genid104 .
+<https://www.itu.int/> <https://w3id.org/DLTOntology#createsStandard> _:genid105 .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Standard> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InformativeStandard> .
+_:genid107 <http://www.w3.org/2000/01/rdf-schema#label> "Recommendations for Successful Adoption in Europe of Emerging Technical Standards on Distributed Ledger/Blockchain Technologies" .
+_:genid107 <http://purl.org/dc/terms/created> "2018-09-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.cenelec.eu/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#StandardizationOrganization> .
+<http://www.cenelec.eu/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#InternationalStandardizationOrganization> .
+<http://www.cenelec.eu/> <http://www.w3.org/2000/01/rdf-schema#label> "European Committee for Electrotechnical Standardization" .
+<http://www.cenelec.eu/> <http://purl.org/dc/terms/coverage> <http://www.wikidata.org/entity/Q458> .
+<http://www.cenelec.eu/> <https://w3id.org/DLTOntology#createsStandard> _:genid107 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#DataProtectionLaw> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/DLTOntology#Law> .
+_:genid14 <http://www.w3.org/2000/01/rdf-schema#label> "Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)" .
+_:genid14 <http://purl.org/dc/terms/identifier> "Regulation (EU) 2016/679" .
+_:genid14 <http://purl.org/dc/terms/created> "2016-04-27"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:genid14 <http://purl.org/dc/terms/creator> "The European Parliament and the Council of the European Union" .
+_:genid14 <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679&from=DE" .

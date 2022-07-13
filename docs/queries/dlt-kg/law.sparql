@@ -1,0 +1,11 @@
+# What are relevant laws in regards to distributed ledger systems?
+# Datasource: https://dlt-ontology.github.io/ontology.nt; https://dlt-ontology.github.io/data.nt
+PREFIX dlt: <https://w3id.org/DLTOntology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?law ?dltsystem WHERE {
+  [ 
+      dlt:isRegulatedBy [a dlt:Law; rdfs:label ?law] ;
+      rdfs:label ?dltsystem 
+  ]
+}

@@ -1,0 +1,10 @@
+# Which components are part of the distributed ledger system?
+# Datasource: https://dlt-ontology.github.io/ontology.nt https://dlt-ontology.github.io/data.nt
+PREFIX dlt: <https://w3id.org/DLTOntology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?component ?dltsystem WHERE {
+  ?sys a dlt:DLTSystem ;
+             rdfs:label ?dltsystem ;
+             dlt:hasComponent [rdfs:label ?component] .
+}

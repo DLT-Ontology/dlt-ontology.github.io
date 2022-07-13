@@ -1,0 +1,1159 @@
+@prefix : <https://w3id.org/DLTOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/DLTOntology#> .
+
+<https://w3id.org/DLTOntology#> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/DLTOntology#canExploit
+:canExploit rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Attack ;
+            rdfs:range :Vulnerability ;
+            rdfs:label "canAttack"^^xsd:string ;
+            rdfs:comment "The canExploit property links an attack on a distributed ledger system or component to the respective vulnerability, which could be used by an attacker to enable further malicious activity in an effort to manipulate or gain control of the system." .
+
+
+###  https://w3id.org/DLTOntology#comesFrom
+:comesFrom rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :IndustryInitiative ;
+           rdfs:range :BusinessSector ;
+           rdfs:label "comesFrom" ;
+           rdfs:comment "It is entirely possible for several organizations of an industry form an initiative to steer and develop the future of distributed ledger technology within that industry in a common effort. This property shows the origins of an industry initiative with regards to the industry of involved parties." .
+
+
+###  https://w3id.org/DLTOntology#controls
+:controls rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain :TechnicalControl ;
+                   rdfs:domain :OrganizationalControl ;
+                   rdfs:range :DLTSystem ;
+                   rdfs:range :DLTComponent ;
+                   rdfs:label "controls" ;
+                   rdfs:comment "Implemented controls can secure components and the entire system itself. This property links a technical or organizational control measure to a distributed ledger system or individual component." .
+
+
+###  https://w3id.org/DLTOntology#createsStandard
+:createsStandard rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :StandardizationOrganization ;
+                 rdfs:range :Standard ;
+                 rdfs:label "createsStandard" ;
+                 rdfs:comment "Behind every normative reference material and standardization there is an organization with the needed authority to publish such material, which can be either a national institute or an international organization. This property links a standard to its organization." .
+
+
+###  https://w3id.org/DLTOntology#hasBusinessSector
+:hasBusinessSector rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain :UseCase ;
+                   rdfs:range :BusinessSector ;
+                   rdfs:label "hasBusinessSector"^^xsd:string ;
+                   rdfs:comment "Distributed ledger technology can be used to realize a variety of different use cases. However, not all of them are a fit for any field or industry. This property highlights the connection between a use case and the specific business sector/industry it is used in." .
+
+
+###  https://w3id.org/DLTOntology#hasComponent
+:hasComponent rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :DLTSystem ;
+               rdfs:range :DLTComponent ;
+               rdfs:label "hasComponent"^^xsd:string ;
+               rdfs:comment "It links an individual component to the DLT system. It is used to show what a system is comprised of and to get a better understanding of the elements and building blocks. Such an overview allows for an analysis or or the implementation of measures for a singular component specifically and to tailor solutions to certain requirements." .
+
+
+###  https://w3id.org/DLTOntology#hasUseCase
+:hasUseCase rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :BusinessSector ;
+            rdfs:range :UseCase ;
+            rdfs:label "hasUseCase"^^xsd:string ;
+            rdfs:comment "This property is used to show which use cases could be used in a selected industry. Not all forms of usage of distributed ledger systems are fit for all types of business." .
+
+
+###  https://w3id.org/DLTOntology#hasVulnerability
+:hasVulnerability rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :DLTComponent ;
+                  rdfs:range :Vulnerability ;
+                  rdfs:label "hasVulnerability" ;
+                  rdfs:comment "This property indicates that one or multiple of the components used in a distributed ledger system carry with them one or an array of vulnerabilities. Having an overview of existing vulnerabilities is crucial for securing the system." .
+
+
+###  https://w3id.org/DLTOntology#isCompliantTo
+:isCompliantTo rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :DLTComponent ,
+                           :DLTSystem ;
+               rdfs:range :Standard ;
+               rdfs:label "isCompliantTo"^^xsd:string ;
+               rdfs:comment "When it comes to using distributed ledger systems in an enterprise setting, national and/or international standardization can become a necessity. This property expresses compliance to existing standardization or normative references on a system or component level." .
+
+
+###  https://w3id.org/DLTOntology#isRegulatedBy
+:isRegulatedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :DLTSystem ;
+               rdfs:range :Law ;
+               rdfs:label "isRegulatedBy"^^xsd:string ;
+               rdfs:comment "As with regular ICT-systems, a distributed ledger system will have to comply with the legal status of the respective country it is used in by any organization. This property connects existing legislation for ICT and DLT systems." .
+
+
+###  https://w3id.org/DLTOntology#isSpecializedFor
+:isSpecializedFor rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :DLTSystem ;
+                  rdfs:range :UseCase ;
+                  rdfs:label "isSpecializedFor" ;
+                  rdfs:comment "Not all implementations of distributed ledger systems are the same or similar in their nature and complexion. This property links existing DLT systems which are tailored for the delivery of a specific use case.".
+
+
+###  https://w3id.org/DLTOntology#isUsedFor
+:isUsedFor rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :DLTSystem ;
+           rdfs:range :BusinessSector ;
+           rdfs:label "isUsedFor" ;
+           rdfs:comment "There are certain distributed ledger systems that are specialized for the use in one specific field or industry. This property is used to highlight this exact relation." .
+
+
+###  https://w3id.org/DLTOntology#mitigates
+:mitigates rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdfs:domain :TechnicalMitigation ;
+                          rdfs:domain :OrganizationalMitigation ;
+                          rdfs:range :DLTSystem ;
+                          rdfs:range :DLTComponent ;
+                          rdfs:label "mitigates" ;
+                          rdfs:comment "Once disaster strikes, it is important to have a series of mitigations in place, to reduce the impact of an attack, malicious event or generally in case of the system breaking down. This property links a technical or organizational mitigation measure to a distributed ledger system or specific component." .
+
+
+###  https://w3id.org/DLTOntology#threatens
+:threatens rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :Attack ;
+           rdfs:range :DLTComponent ,
+                      :DLTSystem ;
+           rdfs:label "threatens" ;
+           rdfs:comment "This property indicated that there is an existing attack on a distributed ledger system or one of its components. Attacks can manipulate specific components and data, or generally weaken the structural integrity of the entire system." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                              rdfs:domain :DLTSystem ;
+                                              rdfs:label "dc:description" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/DLTOntology#API
+:API rdf:type owl:Class ;
+     rdfs:subClassOf :DLTComponent ;
+     rdfs:label "API"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#APIAttack
+:APIAttack rdf:type owl:Class ;
+           rdfs:subClassOf :Attack ;
+           rdfs:label "APIAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#APIVulnerability
+:APIVulnerability rdf:type owl:Class ;
+                  rdfs:subClassOf :Vulnerability ;
+                  rdfs:label "APIVulnerability" .
+
+
+###  https://w3id.org/DLTOntology#AccessControlAttack
+:AccessControlAttack rdf:type owl:Class ;
+                     rdfs:subClassOf :Attack ;
+                     rdfs:label "AccessControlAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#ArtificialIntelligence
+:ArtificialIntelligence rdf:type owl:Class ;
+                        rdfs:subClassOf :UseCase ;
+                        rdfs:label "ArtificialIntelligence" .
+
+
+###  https://w3id.org/DLTOntology#Attack
+:Attack rdf:type owl:Class ;
+        rdfs:label "Attack" .
+
+
+###  https://w3id.org/DLTOntology#AuditTrail
+:AuditTrail rdf:type owl:Class ;
+            rdfs:subClassOf :RecordKeeping ;
+            rdfs:label "AuditTrail" .
+
+
+###  https://w3id.org/DLTOntology#BestPractice
+:BestPractice rdf:type owl:Class ;
+              rdfs:subClassOf :Standard ;
+              rdfs:label "BestPractice" .
+
+
+###  https://w3id.org/DLTOntology#BusinessProcesses
+:BusinessProcesses rdf:type owl:Class ;
+                   rdfs:subClassOf :ContractualUse ;
+                   rdfs:label "BusinessProcesses" .
+
+
+###  https://w3id.org/DLTOntology#BusinessSector
+:BusinessSector rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "BusinessSector" .
+
+
+###  https://w3id.org/DLTOntology#BusinessTransportation
+:BusinessTransportation rdf:type owl:Class ;
+                        rdfs:subClassOf :Transportation ;
+                        rdfs:label "BusinessTransportation" .
+
+
+###  https://w3id.org/DLTOntology#ConsensusAlgorithm
+:ConsensusAlgorithm rdf:type owl:Class ;
+                    rdfs:subClassOf :DLTComponent ;
+                    rdfs:label "ConsensusAlgorithm"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#ConsensusAttack
+:ConsensusAttack rdf:type owl:Class ;
+                 rdfs:subClassOf :Attack ;
+                 rdfs:label "ConsensusAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#ConsensusVulnerabiltiy
+:ConsensusVulnerabiltiy rdf:type owl:Class ;
+                        rdfs:subClassOf :Vulnerability ;
+                        rdfs:label "ConsensusVulnerabiltiy" .
+
+
+###  https://w3id.org/DLTOntology#Control
+:Control rdf:type owl:Class ;
+         rdfs:label "Control" .
+
+
+###  https://w3id.org/DLTOntology#Cryptography
+:Cryptography rdf:type owl:Class ;
+              rdfs:subClassOf :DLTComponent ;
+              rdfs:label "Cryptography" .
+
+
+###  https://w3id.org/DLTOntology#CryptographyAttack
+:CryptographyAttack rdf:type owl:Class ;
+                    rdfs:subClassOf :Attack ;
+                    rdfs:label "CryptographyAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#Cybersecurity
+:Cybersecurity rdf:type owl:Class ;
+               rdfs:subClassOf :UseCase ;
+               rdfs:label "Cybersecurity" .
+
+
+###  https://w3id.org/DLTOntology#DAPPAttack
+:DAPPAttack rdf:type owl:Class ;
+            rdfs:subClassOf :Attack ;
+            rdfs:label "DAPPAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#DLTApplicationAttack
+:DLTApplicationAttack rdf:type owl:Class ;
+                      rdfs:subClassOf :Attack ;
+                      rdfs:label "DLTApplicationAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#DLTApplicationVulnerability
+:DLTApplicationVulnerability rdf:type owl:Class ;
+                             rdfs:subClassOf :Vulnerability ;
+                             rdfs:label "DLTApplicationVulnerability" .
+
+
+###  https://w3id.org/DLTOntology#DLTComponent
+:DLTComponent rdf:type owl:Class ;
+              rdfs:subClassOf owl:Thing ;
+              rdfs:label "DLTComponent"@en .
+
+
+###  https://w3id.org/DLTOntology#DLTSystem
+:DLTSystem rdf:type owl:Class ;
+           rdfs:comment "Test Teststring"^^xsd:string ;
+           rdfs:label "DLTSystem" .
+
+
+###  https://w3id.org/DLTOntology#DataProtectionLaw
+:DataProtectionLaw rdf:type owl:Class ;
+                   rdfs:subClassOf :Law ;
+                   rdfs:label "DataProtectionLaw" .
+
+
+###  https://w3id.org/DLTOntology#DataStorage
+:DataStorage rdf:type owl:Class ;
+             rdfs:subClassOf :DLTComponent ;
+             rdfs:label "DataStorage" .
+
+
+###  https://w3id.org/DLTOntology#DataStorageAttack
+:DataStorageAttack rdf:type owl:Class ;
+                   rdfs:subClassOf :Attack ;
+                   rdfs:label "DataStorageAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#DataStorageVulnerability
+:DataStorageVulnerability rdf:type owl:Class ;
+                          rdfs:subClassOf :Vulnerability ;
+                          rdfs:label "DataStorageVulnerability"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#DataStructure
+:DataStructure rdf:type owl:Class ;
+               rdfs:subClassOf :DLTComponent ;
+               rdfs:label "DataStructure" .
+
+
+###  https://w3id.org/DLTOntology#DataStructureAttack
+:DataStructureAttack rdf:type owl:Class ;
+                     rdfs:subClassOf :Attack ;
+                     rdfs:label "DataStructureAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#DataStructureVulnerability
+:DataStructureVulnerability rdf:type owl:Class ;
+                            rdfs:subClassOf :Vulnerability ;
+                            rdfs:label "DataStructureVulnerability"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#DigitalCurrency
+:DigitalCurrency rdf:type owl:Class ;
+                 rdfs:subClassOf :UseCase ;
+                 rdfs:label "DigitalCurrency" .
+
+
+###  https://w3id.org/DLTOntology#DigitalIdentity
+:DigitalIdentity rdf:type owl:Class ;
+                 rdfs:subClassOf :PrivacyAndIdentity ;
+                 rdfs:label "DigitalIdentity" .
+
+
+###  https://w3id.org/DLTOntology#DistributedApplication
+:DistributedApplication rdf:type owl:Class ;
+                        rdfs:subClassOf :DLTComponent ;
+                        rdfs:label "DistributedApplication"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#DistributedComputing
+:DistributedComputing rdf:type owl:Class ;
+                      rdfs:subClassOf :UseCase ;
+                      rdfs:label "DistributedComputing" .
+
+
+###  https://w3id.org/DLTOntology#DistributedStorage
+:DistributedStorage rdf:type owl:Class ;
+                    rdfs:subClassOf :UseCase ;
+                    rdfs:label "DistributedStorage" .
+
+
+###  https://w3id.org/DLTOntology#Donations
+:Donations rdf:type owl:Class ;
+           rdfs:subClassOf :HumanRightsAndContributions ;
+           rdfs:label "Donations" .
+
+
+###  https://w3id.org/DLTOntology#ECommerce
+:ECommerce rdf:type owl:Class ;
+           rdfs:subClassOf :UseCase ;
+           rdfs:label "ECommerce" .
+
+
+###  https://w3id.org/DLTOntology#EVoting
+:EVoting rdf:type owl:Class ;
+         rdfs:subClassOf :GovernmentalServices ;
+         rdfs:label "EVoting" .
+
+
+###  https://w3id.org/DLTOntology#Engine
+:Engine rdf:type owl:Class ;
+        rdfs:subClassOf :DLTComponent ;
+        rdfs:label "Engine" .
+
+
+###  https://w3id.org/DLTOntology#EngineAttack
+:EngineAttack rdf:type owl:Class ;
+              rdfs:subClassOf :Attack ;
+              rdfs:label "EngineAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#EngineVulnerability
+:EngineVulnerability rdf:type owl:Class ;
+                     rdfs:subClassOf :Vulnerability ;
+                     rdfs:label "EngineVulnerability" .
+
+
+###  https://w3id.org/DLTOntology#Entertainment
+:Entertainment rdf:type owl:Class ;
+               rdfs:subClassOf :UseCase ;
+               rdfs:label "Entertainment"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#FairMarketplace
+:FairMarketplace rdf:type owl:Class ;
+                 rdfs:subClassOf :ECommerce ;
+                 rdfs:label "FairMarketplace" .
+
+
+###  https://w3id.org/DLTOntology#FinancialServicesAndTrading
+:FinancialServicesAndTrading rdf:type owl:Class ;
+                             rdfs:subClassOf :UseCase ;
+                             rdfs:label "FinancialServicesAndTrading"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#Gambling
+:Gambling rdf:type owl:Class ;
+          rdfs:subClassOf :Entertainment ;
+          rdfs:label "Gambling" .
+
+
+###  https://w3id.org/DLTOntology#Gaming
+:Gaming rdf:type owl:Class ;
+        rdfs:subClassOf :Entertainment ;
+        rdfs:label "Gaming" .
+
+
+###  https://w3id.org/DLTOntology#GovernmentalServices
+:GovernmentalServices rdf:type owl:Class ;
+                      rdfs:subClassOf :UseCase ;
+                      rdfs:label "GovernmentalServices"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#HumanRightsAndContributions
+:HumanRightsAndContributions rdf:type owl:Class ;
+                             rdfs:subClassOf :UseCase ;
+                             rdfs:label "HumanRightsAndContributions" .
+
+
+###  https://w3id.org/DLTOntology#ICTSystemLaw
+:ICTSystemLaw rdf:type owl:Class ;
+              rdfs:subClassOf :Law ;
+              rdfs:label "ICTSystemLaw" .
+
+
+###  https://w3id.org/DLTOntology#IdentityAndAccessControlSystems
+:IdentityAndAccessControlSystems rdf:type owl:Class ;
+                                 rdfs:subClassOf :PrivacyAndIdentity ;
+                                 rdfs:label "IdentityAndAccessControlSystems"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#IndicationOfSource
+:IndicationOfSource rdf:type owl:Class ;
+                    rdfs:subClassOf :SupplyChain ;
+                    rdfs:label "IndicationOfSource" .
+
+
+###  https://w3id.org/DLTOntology#IndustryInitiative
+:IndustryInitiative rdf:type owl:Class ;
+                    rdfs:subClassOf :StandardizationOrganization ;
+                    rdfs:label "IndustryInitiatives"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#IndustryStandard
+:IndustryStandard rdf:type owl:Class ;
+                  rdfs:subClassOf :Standard ;
+                  rdfs:label "IndustryStandard" .
+
+
+###  https://w3id.org/DLTOntology#InformativeStandard
+:InformativeStandard rdf:type owl:Class ;
+                     rdfs:subClassOf :Standard ;
+                     rdfs:label "InformativeStandard"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#Inheritance
+:Inheritance rdf:type owl:Class ;
+             rdfs:subClassOf :ContractualUse ;
+             rdfs:label "Inheritance" .
+
+
+###  https://w3id.org/DLTOntology#InsuficientVerificationAndValidation
+:InsuficientVerificationAndValidation rdf:type owl:Class ;
+                                      rdfs:subClassOf :Vulnerability ;
+                                      rdfs:label "InsuficientVerificationAndValidation" .
+
+
+###  https://w3id.org/DLTOntology#IntellectualProperty
+:IntellectualProperty rdf:type owl:Class ;
+                      rdfs:subClassOf :RecordKeeping ;
+                      rdfs:label "IntellectualProperty" .
+
+
+###  https://w3id.org/DLTOntology#InternationalStandardizationOrganization
+:InternationalStandardizationOrganization rdf:type owl:Class ;
+                                          rdfs:subClassOf :StandardizationOrganization ;
+                                          rdfs:label "InternationalStandardizationOrganization"@en .
+
+
+###  https://w3id.org/DLTOntology#IoT
+:IoT rdf:type owl:Class ;
+     rdfs:subClassOf :UseCase ;
+     rdfs:label "IoT" .
+
+
+###  https://w3id.org/DLTOntology#IoTEcosystem
+:IoTEcosystem rdf:type owl:Class ;
+              rdfs:subClassOf :IoT ;
+              rdfs:label "IoTEcosystem" .
+
+
+###  https://w3id.org/DLTOntology#LackingPermissionControl
+:LackingPermissionControl rdf:type owl:Class ;
+                          rdfs:subClassOf :Vulnerability ;
+                          rdfs:label "LackingPermissionControl" .
+
+
+###  https://w3id.org/DLTOntology#LandRegister
+:LandRegister rdf:type owl:Class ;
+              rdfs:subClassOf :RecordKeeping ;
+              rdfs:label "LandRegister" .
+
+
+###  https://w3id.org/DLTOntology#Law
+:Law rdf:type owl:Class ;
+     rdfs:label "Law" .
+
+
+###  https://w3id.org/DLTOntology#LegalContracts
+:LegalContracts rdf:type owl:Class ;
+                rdfs:subClassOf :ContractualUse ;
+                rdfs:label "LegalContracts"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#MerchantConnection
+:MerchantConnection rdf:type owl:Class ;
+                    rdfs:subClassOf :ECommerce ;
+                    rdfs:label "MerchantConnection" .
+
+
+###  https://w3id.org/DLTOntology#Microfinance
+:Microfinance rdf:type owl:Class ;
+              rdfs:subClassOf :DigitalCurrency ;
+              rdfs:label "Microfinance" .
+
+
+###  https://w3id.org/DLTOntology#Mitigation
+:Mitigation rdf:type owl:Class ;
+            rdfs:label "Mitigation" .
+
+
+###  https://w3id.org/DLTOntology#MusicIndustry
+:MusicIndustry rdf:type owl:Class ;
+               rdfs:subClassOf :Entertainment ;
+               rdfs:label "MusicIndustry" .
+
+
+###  https://w3id.org/DLTOntology#NGO
+:NGO rdf:type owl:Class ;
+     rdfs:subClassOf :HumanRightsAndContributions ;
+     rdfs:label "NGO" .
+
+
+###  https://w3id.org/DLTOntology#NationalStandardizationOrganization
+:NationalStandardizationOrganization rdf:type owl:Class ;
+                                     rdfs:subClassOf :StandardizationOrganization ;
+                                     rdfs:label "NationalStandardizationOrganization"@en .
+
+
+###  https://w3id.org/DLTOntology#NetworkAttack
+:NetworkAttack rdf:type owl:Class ;
+               rdfs:subClassOf :Attack ;
+               rdfs:label "NetworkAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#NetworkComponent
+:NetworkComponent rdf:type owl:Class ;
+                  rdfs:subClassOf :DLTComponent ;
+                  rdfs:label "NetworkComponent"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#NetworkVulnerability
+:NetworkVulnerability rdf:type owl:Class ;
+                      rdfs:subClassOf :Vulnerability ;
+                      rdfs:label "NetworkVulnerability" .
+
+
+###  https://w3id.org/DLTOntology#NormativeStandard
+:NormativeStandard rdf:type owl:Class ;
+                   rdfs:subClassOf :Standard ;
+                   rdfs:label "NormativeStandard"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#OrganizationalControl
+:OrganizationalControl rdf:type owl:Class ;
+                       rdfs:subClassOf :Control ;
+                       rdfs:label "OrganizationalControl" .
+
+
+###  https://w3id.org/DLTOntology#OrganizationalMitigation
+:OrganizationalMitigation rdf:type owl:Class ;
+                          rdfs:subClassOf :Mitigation ;
+                          rdfs:label "OrganizationalMitigation" .
+
+
+###  https://w3id.org/DLTOntology#Ownership
+:Ownership rdf:type owl:Class ;
+           rdfs:subClassOf :RecordKeeping ;
+           rdfs:label "Ownership" .
+
+
+###  https://w3id.org/DLTOntology#P2PLending
+:P2PLending rdf:type owl:Class ;
+            rdfs:subClassOf :DigitalCurrency ;
+            rdfs:label "P2PLending" .
+
+
+###  https://w3id.org/DLTOntology#Payments
+:Payments rdf:type owl:Class ;
+          rdfs:subClassOf :DigitalCurrency ;
+          rdfs:label "Payments" .
+
+
+###  https://w3id.org/DLTOntology#PermissionControl
+:PermissionControl rdf:type owl:Class ;
+                   rdfs:subClassOf :DLTComponent ;
+                   rdfs:label "PermissionControl" .
+
+
+###  https://w3id.org/DLTOntology#PowerManagement
+:PowerManagement rdf:type owl:Class ;
+                 rdfs:subClassOf :UseCase ;
+                 rdfs:label "PowerManagement" .
+
+
+###  https://w3id.org/DLTOntology#PrivacyAndIdentity
+:PrivacyAndIdentity rdf:type owl:Class ;
+                    rdfs:subClassOf :UseCase ;
+                    rdfs:label "PrivacyAndIdentity" .
+
+
+###  https://w3id.org/DLTOntology#Protocol
+:Protocol rdf:type owl:Class ;
+          rdfs:subClassOf :DLTComponent ;
+          rdfs:label "Protocol" .
+
+
+###  https://w3id.org/DLTOntology#ProtocolAttack
+:ProtocolAttack rdf:type owl:Class ;
+                rdfs:subClassOf :Attack ;
+                rdfs:label "ProtocolAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#ProtocolVulnerability
+:ProtocolVulnerability rdf:type owl:Class ;
+                       rdfs:subClassOf :Vulnerability ;
+                       rdfs:label "ProtocolVulnerability" .
+
+
+###  https://w3id.org/DLTOntology#PublicTransportation
+:PublicTransportation rdf:type owl:Class ;
+                      rdfs:subClassOf :Transportation ;
+                      rdfs:label "PublicTransportation" .
+
+
+###  https://w3id.org/DLTOntology#RecordKeeping
+:RecordKeeping rdf:type owl:Class ;
+               rdfs:subClassOf :UseCase ;
+               rdfs:label "RecordKeeping" .
+
+
+###  https://w3id.org/DLTOntology#RightToInformation
+:RightToInformation rdf:type owl:Class ;
+                    rdfs:subClassOf :HumanRightsAndContributions ;
+                    rdfs:label "RightToInformation" .
+
+
+###  https://w3id.org/DLTOntology#SecureIoT
+:SecureIoT rdf:type owl:Class ;
+           rdfs:subClassOf :IoT ;
+           rdfs:label "SecureIoT" .
+
+
+###  https://w3id.org/DLTOntology#SmartCars
+:SmartCars rdf:type owl:Class ;
+           rdfs:subClassOf :Transportation ;
+           rdfs:label "SmartCars" .
+
+
+###  https://w3id.org/DLTOntology#SmartContract
+:SmartContract rdf:type owl:Class ;
+               rdfs:subClassOf :DLTComponent ;
+               rdfs:label "SmartContract" .
+
+
+###  https://w3id.org/DLTOntology#ContractualUse
+:ContractualUse rdf:type owl:Class ;
+                rdfs:subClassOf :UseCase ;
+                rdfs:label "ContractualUse"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#SmartManufacturing
+:SmartManufacturing rdf:type owl:Class ;
+                    rdfs:subClassOf :UseCase ;
+                    rdfs:label "SmartManufacturing" .
+
+
+###  https://w3id.org/DLTOntology#SmartMeter
+:SmartMeter rdf:type owl:Class ;
+            rdfs:subClassOf :PowerManagement ;
+            rdfs:label "SmartMeter" .
+
+
+###  https://w3id.org/DLTOntology#Standard
+:Standard rdf:type owl:Class ;
+          rdfs:label "Standard" .
+
+
+###  https://w3id.org/DLTOntology#StandardizationOrganization
+:StandardizationOrganization rdf:type owl:Class ;
+                             rdfs:label "StandardizationOrganization" .
+
+
+###  https://w3id.org/DLTOntology#Streaming
+:Streaming rdf:type owl:Class ;
+           rdfs:subClassOf :Entertainment ;
+           rdfs:label "Streaming" .
+
+
+###  https://w3id.org/DLTOntology#SupplyChain
+:SupplyChain rdf:type owl:Class ;
+             rdfs:subClassOf :UseCase ;
+             rdfs:label "SupplyChain" .
+
+
+###  https://w3id.org/DLTOntology#TechnicalControl
+:TechnicalControl rdf:type owl:Class ;
+                  rdfs:subClassOf :Control ;
+                  rdfs:label "TechnicalControl" .
+
+
+###  https://w3id.org/DLTOntology#TechnicalMitigation
+:TechnicalMitigation rdf:type owl:Class ;
+                     rdfs:subClassOf :Mitigation ;
+                     rdfs:label "TechnicalMitigation" .
+
+
+###  https://w3id.org/DLTOntology#Tracking
+:Tracking rdf:type owl:Class ;
+          rdfs:subClassOf :SupplyChain ;
+          rdfs:label "Tracking" .
+
+
+###  https://w3id.org/DLTOntology#Transaction
+:Transaction rdf:type owl:Class ;
+             rdfs:subClassOf :DLTComponent ;
+             rdfs:label "Transaction" .
+
+
+###  https://w3id.org/DLTOntology#Transportation
+:Transportation rdf:type owl:Class ;
+                rdfs:subClassOf :UseCase ;
+                rdfs:label "Transportation" .
+
+
+###  https://w3id.org/DLTOntology#Traveling
+:Traveling rdf:type owl:Class ;
+           rdfs:subClassOf :Transportation ;
+           rdfs:label "Traveling" .
+
+
+###  https://w3id.org/DLTOntology#UseCase
+:UseCase rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         rdfs:label "UseCase" .
+
+
+###  https://w3id.org/DLTOntology#UserInterface
+:UserInterface rdf:type owl:Class ;
+               rdfs:subClassOf :DLTComponent ;
+               rdfs:label "UserInterface" .
+
+
+###  https://w3id.org/DLTOntology#VerificationAndValidation
+:VerificationAndValidation rdf:type owl:Class ;
+                           rdfs:subClassOf :DLTComponent ;
+                           rdfs:label "VerificationAndValidation" .
+
+
+###  https://w3id.org/DLTOntology#VerificationAndValidationAttack
+:VerificationAndValidationAttack rdf:type owl:Class ;
+                                 rdfs:subClassOf :Attack ;
+                                 rdfs:label "VerificationAndValidationAttack"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#Voting
+:Voting rdf:type owl:Class ;
+        rdfs:subClassOf :RecordKeeping ;
+        rdfs:label "Voting" .
+
+
+###  https://w3id.org/DLTOntology#Vulnerability
+:Vulnerability rdf:type owl:Class ;
+               rdfs:label "Vulnerability" .
+
+
+###  https://w3id.org/DLTOntology#Wallet
+:Wallet rdf:type owl:Class ;
+        rdfs:subClassOf :DLTComponent ;
+        rdfs:label "Wallet"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#WeakCryptography
+:WeakCryptography rdf:type owl:Class ;
+                  rdfs:subClassOf :Vulnerability ;
+                  rdfs:label "WeakCryptography" .
+
+
+###  https://w3id.org/DLTOntology#dAppVulnerability
+:dAppVulnerability rdf:type owl:Class ;
+                   rdfs:subClassOf :Vulnerability ;
+                   rdfs:label "dAppVulnerability"^^xsd:string .
+
+
+###  https://w3id.org/DLTOntology#SmartContractVulnerability
+:SmartContractVulnerability rdf:type owl:Class ;
+                    rdfs:subClassOf :Vulnerability ;
+                    rdfs:label "SmartContractVulnerability" .
+
+
+###  https://w3id.org/DLTOntology#SmartContractAttack
+:SmartContractAttack rdf:type owl:Class ;
+                    rdfs:subClassOf :Attack ;
+                    rdfs:label "SmartContractAttack" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/DLTOntology#Agriculture
+:Agriculture rdf:type owl:NamedIndividual ,
+                      :BusinessSector ;
+             rdfs:label "Agriculture" .
+
+
+###  https://w3id.org/DLTOntology#ArtsAndRecreation
+:ArtsAndRecreation rdf:type owl:NamedIndividual ,
+                            :BusinessSector ;
+                   rdfs:label "ArtsAndRecreation" .
+
+
+###  https://w3id.org/DLTOntology#Automotive
+:Automotive rdf:type owl:NamedIndividual ,
+                     :BusinessSector ;
+            rdfs:label "Automotive" .
+
+
+###  https://w3id.org/DLTOntology#BSIGermany
+:BSIGermany rdf:type owl:NamedIndividual ,
+                     :NationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#BeltAndRoadInitiativeBlockchainAlliance
+:BeltAndRoadInitiativeBlockchainAlliance rdf:type owl:NamedIndividual ,
+                                                  :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#BlockDeliveryNetwork
+:BlockDeliveryNetwork rdf:type owl:NamedIndividual ,
+                               :NetworkComponent ;
+                      rdfs:label "BlockDeliveryNetwork" .
+
+
+###  https://w3id.org/DLTOntology#Blockchain
+:Blockchain rdf:type owl:NamedIndividual ,
+                     :DataStructure .
+
+
+###  https://w3id.org/DLTOntology#BlockchainInTransportAlliance
+:BlockchainInTransportAlliance rdf:type owl:NamedIndividual ,
+                                        :IndustryInitiative .
+
+
+###  https://w3id.org/DLTOntology#BlockchainIndustrialAlliance
+:BlockchainIndustrialAlliance rdf:type owl:NamedIndividual ,
+                                       :IndustryInitiative .
+
+
+###  https://w3id.org/DLTOntology#BlockchainIndustryGroup
+:BlockchainIndustryGroup rdf:type owl:NamedIndividual ,
+                                  :IndustryInitiative .
+
+
+###  https://w3id.org/DLTOntology#BritishStandardsInstitute
+:BritishStandardsInstitute rdf:type owl:NamedIndividual ,
+                                    :NationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#CEN-CENELEC
+:CEN-CENELEC rdf:type owl:NamedIndividual ,
+                      :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#ChamberOfDigitalCommerce
+:ChamberOfDigitalCommerce rdf:type owl:NamedIndividual ,
+                                   :NationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#ChinaElectronicStandardizationInstitute
+:ChinaElectronicStandardizationInstitute rdf:type owl:NamedIndividual ,
+                                                  :NationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#DAG
+:DAG rdf:type owl:NamedIndividual ,
+              :DataStructure .
+
+
+###  https://w3id.org/DLTOntology#DIN
+:DIN rdf:type owl:NamedIndividual ,
+              :NationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#DataBus
+:DataBus rdf:type owl:NamedIndividual ,
+                  :DataStorage ;
+         rdfs:label "DataBus" .
+
+
+###  https://w3id.org/DLTOntology#DigitalContainerShippingAssociation
+:DigitalContainerShippingAssociation rdf:type owl:NamedIndividual ,
+                                              :IndustryInitiative .
+
+
+###  https://w3id.org/DLTOntology#ENISA
+:ENISA rdf:type owl:NamedIndividual ,
+                :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#ETSI
+:ETSI rdf:type owl:NamedIndividual ,
+               :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#Education
+:Education rdf:type owl:NamedIndividual ,
+                    :UseCase ;
+           rdfs:label "Education" .
+
+
+###  https://w3id.org/DLTOntology#EnterpriseEthereumAlliance
+:EnterpriseEthereumAlliance rdf:type owl:NamedIndividual ,
+                                     :IndustryInitiative .
+
+
+###  https://w3id.org/DLTOntology#FinancialServices
+:FinancialServices rdf:type owl:NamedIndividual ,
+                            :BusinessSector ;
+                   rdfs:label "FinancialServices" .
+
+
+###  https://w3id.org/DLTOntology#GlobalDigitalFinance
+:GlobalDigitalFinance rdf:type owl:NamedIndividual ,
+                               :IndustryInitiative .
+
+
+###  https://w3id.org/DLTOntology#Hashgraph
+:Hashgraph rdf:type owl:NamedIndividual ,
+                    :DataStructure .
+
+
+###  https://w3id.org/DLTOntology#Hashtable
+:Hashtable rdf:type owl:NamedIndividual ,
+                    :DataStructure .
+
+
+###  https://w3id.org/DLTOntology#Healthcare
+:Healthcare rdf:type owl:NamedIndividual ,
+                     :BusinessSector ;
+            rdfs:label "Healthcare" .
+
+
+###  https://w3id.org/DLTOntology#Hyperledger
+:Hyperledger rdf:type owl:NamedIndividual ,
+                      :IndustryInitiative .
+
+
+###  https://w3id.org/DLTOntology#ICC-DSI
+:ICC-DSI rdf:type owl:NamedIndividual ,
+                  :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#IEC
+:IEC rdf:type owl:NamedIndividual ,
+              :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#IEEE
+:IEEE rdf:type owl:NamedIndividual ,
+               :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#ISO
+:ISO rdf:type owl:NamedIndividual ,
+              :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#ITU-T
+:ITU-T rdf:type owl:NamedIndividual ,
+                :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#Insurance
+:Insurance rdf:type owl:NamedIndividual ,
+                    :BusinessSector ;
+           rdfs:label "Insurance" .
+
+
+###  https://w3id.org/DLTOntology#InternetEngineeringTaskForce
+:InternetEngineeringTaskForce rdf:type owl:NamedIndividual ,
+                                       :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#InternetResearchTaskForce
+:InternetResearchTaskForce rdf:type owl:NamedIndividual ,
+                                    :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#InternetWorkAlliance
+:InternetWorkAlliance rdf:type owl:NamedIndividual ,
+                               :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#JointWorkingGroupOnInterVASPMessagingStandards
+:JointWorkingGroupOnInterVASPMessagingStandards rdf:type owl:NamedIndividual ,
+                                                         :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#Manufacturing
+:Manufacturing rdf:type owl:NamedIndividual ,
+                        :BusinessSector ;
+               rdfs:label "Manufacturing" .
+
+
+###  https://w3id.org/DLTOntology#Mining
+:Mining rdf:type owl:NamedIndividual ,
+                 :BusinessSector ;
+        rdfs:label "Mining" .
+
+
+###  https://w3id.org/DLTOntology#MobilityOpenBlockchainInitiative
+:MobilityOpenBlockchainInitiative rdf:type owl:NamedIndividual ,
+                                           :IndustryInitiative .
+
+
+###  https://w3id.org/DLTOntology#NIST
+:NIST rdf:type owl:NamedIndividual ,
+               :NationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#NationalBlockchainAndDistributedAccountingTechnologyStandardizationTechnicalCommittee
+:NationalBlockchainAndDistributedAccountingTechnologyStandardizationTechnicalCommittee rdf:type owl:NamedIndividual ,
+                                                                                                :NationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#OffChain
+:OffChain rdf:type owl:NamedIndividual ,
+                   :DataStorage ;
+          rdfs:label "OffChain" .
+
+
+###  https://w3id.org/DLTOntology#OnChain
+:OnChain rdf:type owl:NamedIndividual ,
+                  :DataStorage ;
+         rdfs:label "OnChain" .
+
+
+###  https://w3id.org/DLTOntology#PeerToPeer
+:PeerToPeer rdf:type owl:NamedIndividual ,
+                     :NetworkComponent ;
+            rdfs:label "PeerToPeer" .
+
+
+###  https://w3id.org/DLTOntology#Property
+:Property rdf:type owl:NamedIndividual ,
+                   :BusinessSector ;
+          rdfs:label "Property" .
+
+
+###  https://w3id.org/DLTOntology#PublicSector
+:PublicSector rdf:type owl:NamedIndividual ,
+                       :BusinessSector ;
+              rdfs:label "PublicSector" .
+
+
+###  https://w3id.org/DLTOntology#RPLx
+:RPLx rdf:type owl:NamedIndividual ,
+               :NetworkComponent ;
+      rdfs:label "RPLx" .
+
+
+###  https://w3id.org/DLTOntology#Retail
+:Retail rdf:type owl:NamedIndividual ,
+                 :BusinessSector ;
+        rdfs:label "Retail" .
+
+
+###  https://w3id.org/DLTOntology#StandardsAdministrationOfChina
+:StandardsAdministrationOfChina rdf:type owl:NamedIndividual ,
+                                         :NationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#StandardsAustralia
+:StandardsAustralia rdf:type owl:NamedIndividual ,
+                             :NationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#TechnologyMediaAndTelecommunications
+:TechnologyMediaAndTelecommunications rdf:type owl:NamedIndividual ,
+                                               :BusinessSector ;
+                                      rdfs:label "TechnologyMediaAndTelecommunications" .
+
+
+###  https://w3id.org/DLTOntology#TransportAndLogistics
+:TransportAndLogistics rdf:type owl:NamedIndividual ,
+                                :BusinessSector ;
+                       rdfs:label "TransportAndLogistics" .
+
+
+###  https://w3id.org/DLTOntology#TrustedExecutionEnvironment
+:TrustedExecutionEnvironment rdf:type owl:NamedIndividual ,
+                                      :NetworkComponent ;
+                             rdfs:label "TrustedExecutionEnvironment" .
+
+
+###  https://w3id.org/DLTOntology#Utilities
+:Utilities rdf:type owl:NamedIndividual ,
+                    :BusinessSector ;
+           rdfs:label "Utilities" .
+
+
+###  https://w3id.org/DLTOntology#W3C
+:W3C rdf:type owl:NamedIndividual ,
+              :InternationalStandardizationOrganization .
+
+
+###  https://w3id.org/DLTOntology#WorldIntellectualPropertyOrganisation
+:WorldIntellectualPropertyOrganisation rdf:type owl:NamedIndividual ,
+                                                :InternationalStandardizationOrganization .
+

@@ -1,0 +1,9 @@
+# What are known smart contract vulnerabilities?
+# Datasource: https://dlt-ontology.github.io/ontology.nt; https://dlt-ontology.github.io/data.nt
+PREFIX dlt: <https://w3id.org/DLTOntology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?l WHERE {
+  ?vulnerability a dlt:SmartContractVulnerability ;
+                 rdfs:label ?l .
+}
